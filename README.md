@@ -1,1 +1,1 @@
-# szakiweb
+# Prémium websablonok – pro verzió
