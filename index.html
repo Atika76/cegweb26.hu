@@ -1,412 +1,168 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SzakiWeb – Kész weboldal szakiknak és vállalkozóknak</title>
-  <meta name="description" content="Kész, mobilbarát weboldalak szakiknak és vállalkozásoknak. Gyors indulás, modern megjelenés, egyszerű megrendelés.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta property="og:title" content="SzakiWeb – Kész weboldal szakiknak és vállalkozóknak">
-  <meta property="og:description" content="Modern, gyorsan induló weboldalak szakiknak, szolgáltatóknak és vállalkozásoknak.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SzakiWeb – Kész weboldal szakiknak és vállalkozóknak">
-  <meta name="twitter:description" content="Kész weboldalak, gyors indulás, erős megjelenés és egyszerű megrendelés.">
-  <meta name="twitter:image" content="assets/og-image.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SzakiWeb – Weboldal szakiknak</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+
+<style>
+body{font-family:Inter, sans-serif;margin:0;background:#0b0f14;color:#fff}
+.container{max-width:1100px;margin:auto;padding:20px}
+.hero{padding:80px 20px;text-align:center}
+.hero h1{font-size:40px;margin-bottom:15px}
+.hero p{color:#ccc;font-size:18px}
+.btn{background:#22c55e;color:#000;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:bold}
+.btn:hover{opacity:0.9}
+.section{padding:60px 20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:#111827;padding:20px;border-radius:10px}
+.price{font-size:26px;font-weight:bold;margin:10px 0}
+input,textarea,select{width:100%;padding:12px;margin:8px 0;border-radius:6px;border:none}
+form{background:#111827;padding:20px;border-radius:10px}
+footer{text-align:center;padding:20px;color:#aaa}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+</style>
+
 </head>
-<body data-page="default">
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img class="brand-logo" src="assets/logo-weboldalak.png" alt="SzakiWeb logó">
-        <span>SzakiWeb</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#mintak">Minták</a>
-        <a href="#arak">Árak</a>
-        <a href="#folyamat">Hogyan működik</a>
-        <a href="#kapcsolat">Megrendelés</a>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">Kész weboldalak szakiknak és vállalkozóknak</span>
-        <h1>Modern weboldal<br>gyorsan, átláthatóan, elérhető áron</h1>
-        <p class="lead">
-          Kész mintákból induló, mobilbarát weboldalak építőipari vállalkozóknak, autószervizeknek,
-          éttermeknek, rendelőknek és más szolgáltatóknak. Gyors indulás, letisztult megjelenés,
-          egyszerű kapcsolatfelvétel.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#mintak">Minták megtekintése</a>
-          <a class="btn-outline" href="#kapcsolat">Kérek weboldalt</a>
-        </div>
-        <div class="price-pill">Weboldal már 49 000 Ft-tól</div>
-        <div class="stats">
-          <div class="stat"><b>4</b><span>kész prémium minta</span></div>
-          <div class="stat"><b>1–3 nap</b><span>gyors indulás</span></div>
-          <div class="stat"><b>100%</b><span>mobilbarát megjelenés</span></div>
-        </div>
-      </div>
-      <div class="preview reveal">
-        <div class="preview-frame"><img src="assets/preview-main.svg" alt="SzakiWeb előnézet"></div>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+<div class="container">
+<h1>Weboldal szakiknak 1–3 nap alatt</h1>
+<p>Nem kell értened hozzá. Nem kell hónapokat várni.<br>
+Kész weboldalt kapsz, amit azonnal használhatsz.</p>
 
-  <section class="section reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Mit tartalmaz a weboldal?</h2>
-        <p>Átlátható felépítés, modern megjelenés, jól látható kapcsolatfelvételi lehetőség és gyors indulás.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="feature-item">
-            <div class="feature-icon">✓</div>
-            <div>
-              <b>Gyors indulás</b>
-              <span class="muted">Kész mintából indul, ezért rövid idő alatt elkészülhet.</span>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="feature-item">
-            <div class="feature-icon">★</div>
-            <div>
-              <b>Modern megjelenés</b>
-              <span class="muted">Letisztult, prémium hatású oldal mobilra és asztali nézetre is.</span>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="feature-item">
-            <div class="feature-icon">⌂</div>
-            <div>
-              <b>Kapcsolatfelvételre építve</b>
-              <span class="muted">Jól látható gombokkal és egyszerű ajánlatkéréssel.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<br>
 
-  <section id="mintak" class="section reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Választható minták</h2>
-        <p>Válaszd ki a hozzád legjobban illő stílust, és kérd ugyanebben a formában a saját weboldaladat.</p>
-      </div>
+<a class="btn" href="#kapcsolat">Kérek weboldalt</a>
 
-      <div class="grid-2">
-        <article class="card">
-          <div class="template-thumb"><img src="assets/preview-epito.svg" alt="Építőipari minta"></div>
-          <span class="template-badge">Erőteljes • Bizalomépítő</span>
-          <h3>Építőipari prémium sablon</h3>
-          <p>Kőműveseknek, burkolóknak, felújítóknak, generálkivitelezőknek és szakipari vállalkozásoknak.</p>
-          <div class="card-actions">
-            <a class="btn-outline" href="epitoipari-premium.html">Élő minta</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Építőipari prémium sablon" data-package="Standard">Ezt kérem</a>
-          </div>
-        </article>
+<br><br>
 
-        <article class="card">
-          <div class="template-thumb"><img src="assets/preview-auto.svg" alt="Autószerelő minta"></div>
-          <span class="template-badge">Sportos • Dinamikus</span>
-          <h3>Autószerelő prémium sablon</h3>
-          <p>Autószervizeknek, tuning műhelyeknek, gumiszervizeknek és prémium autós vállalkozásoknak.</p>
-          <div class="card-actions">
-            <a class="btn-outline" href="autoszerelo-premium.html">Élő minta</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Autószerelő prémium sablon" data-package="Standard">Ezt kérem</a>
-          </div>
-        </article>
+<div style="color:#22c55e;font-size:20px;font-weight:bold;">
+Már 49.000 Ft-tól
+</div>
 
-        <article class="card">
-          <div class="template-thumb"><img src="assets/preview-etterem.svg" alt="Étterem minta"></div>
-          <span class="template-badge">Elegáns • Modern</span>
-          <h3>Étterem prémium sablon</h3>
-          <p>Éttermeknek, bisztróknak, kávézóknak, street food helyeknek és vendéglátó vállalkozásoknak.</p>
-          <div class="card-actions">
-            <a class="btn-outline" href="etterem-premium.html">Élő minta</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Étterem prémium sablon" data-package="Alap">Ezt kérem</a>
-          </div>
-        </article>
+</div>
+</section>
 
-        <article class="card">
-          <div class="template-thumb"><img src="assets/preview-fogorvos.svg" alt="Fogorvosi minta"></div>
-          <span class="template-badge">Tiszta • Prémium</span>
-          <h3>Fogorvosi prémium sablon</h3>
-          <p>Fogorvosi rendelőknek, klinikáknak és egészségügyi szolgáltatóknak.</p>
-          <div class="card-actions">
-            <a class="btn-outline" href="fogorvos-premium.html">Élő minta</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Fogorvosi prémium sablon" data-package="Prémium">Ezt kérem</a>
-          </div>
-        </article>
-      </div>
+<section class="section">
+<div class="container">
+<h2>Választható weboldalak</h2>
 
-      <p class="packages-note">A minták személyre szabhatók névvel, elérhetőségekkel, képekkel, szolgáltatásokkal és színekkel.</p>
-    </div>
-  </section>
+<div class="grid">
 
-  <section id="arak" class="section reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Árak</h2>
-        <p>Egyszerű csomagok, átlátható árakkal.</p>
-      </div>
+<div class="card">
+<h3>Építőipari weboldal</h3>
+<p>Kőműveseknek, burkolóknak, felújítóknak</p>
+<a class="btn" href="epitoipari-premium.html">Megnézem</a>
+<br><br>
+<a class="btn" href="#kapcsolat">Ezt kérem</a>
+</div>
 
-      <div class="grid-3">
-        <article class="price">
-          <h3>Alap</h3>
-          <div class="amount">49 000 Ft</div>
-          <small>1 oldalas induló bemutatkozó oldal</small>
-          <ul>
-            <li>kész sablon testreszabása</li>
-            <li>név, szöveg, elérhetőség csere</li>
-            <li>mobilbarát kialakítás</li>
-          </ul>
-          <a class="btn js-prefill" href="#kapcsolat" data-package="Alap">Megrendelem</a>
-        </article>
+<div class="card">
+<h3>Autószerelő weboldal</h3>
+<p>Szervizeknek és autós vállalkozásoknak</p>
+<a class="btn" href="autoszerelo-premium.html">Megnézem</a>
+<br><br>
+<a class="btn" href="#kapcsolat">Ezt kérem</a>
+</div>
 
-        <article class="price popular">
-          <h3>Standard</h3>
-          <div class="amount">69 000 Ft</div>
-          <small>a legnépszerűbb választás</small>
-          <ul>
-            <li>erősebb tartalmi felépítés</li>
-            <li>kapcsolatfelvételi logika</li>
-            <li>jobb üzleti megjelenés</li>
-          </ul>
-          <a class="btn js-prefill" href="#kapcsolat" data-package="Standard">Megrendelem</a>
-        </article>
+<div class="card">
+<h3>Étterem weboldal</h3>
+<p>Vendéglátó és éttermi vállalkozásoknak</p>
+<a class="btn" href="etterem-premium.html">Megnézem</a>
+<br><br>
+<a class="btn" href="#kapcsolat">Ezt kérem</a>
+</div>
 
-        <article class="price">
-          <h3>Prémium</h3>
-          <div class="amount">89 000 Ft</div>
-          <small>komolyabb, egyedibb megjelenés</small>
-          <ul>
-            <li>extra tartalmi blokkok</li>
-            <li>kiemelt gombok és hangsúlyok</li>
-            <li>prémium összhatás</li>
-          </ul>
-          <a class="btn js-prefill" href="#kapcsolat" data-package="Prémium">Megrendelem</a>
-        </article>
-      </div>
+<div class="card">
+<h3>Fogorvos weboldal</h3>
+<p>Rendelőknek és egészségügyi szolgáltatóknak</p>
+<a class="btn" href="fogorvos-premium.html">Megnézem</a>
+<br><br>
+<a class="btn" href="#kapcsolat">Ezt kérem</a>
+</div>
 
-      <p class="packages-note">A domain és tárhely külön költség lehet.</p>
-    </div>
-  </section>
+</div>
+</div>
+</section>
 
-  <section id="folyamat" class="section reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Hogyan működik?</h2>
-        <p>Gyors, egyszerű folyamat néhány lépésben.</p>
-      </div>
+<section class="section">
+<div class="container">
+<h2>Árak</h2>
 
-      <div class="grid-3">
-        <article class="process-card">
-          <span class="kicker">1. lépés</span>
-          <h3>Minta és csomag kiválasztása</h3>
-          <p>Kiválasztod a megfelelő stílust, majd megadod, melyik csomagot szeretnéd.</p>
-        </article>
+<div class="grid">
 
-        <article class="process-card">
-          <span class="kicker">2. lépés</span>
-          <h3>Adatok elküldése</h3>
-          <p>Név, telefonszám, e-mail, rövid leírás, szolgáltatások és képek.</p>
-        </article>
+<div class="card">
+<h3>Alap</h3>
+<div class="price">49.000 Ft</div>
+<p>Kész sablon + adatok beállítása</p>
+<a class="btn" href="#kapcsolat">Megrendelem</a>
+</div>
 
-        <article class="process-card">
-          <span class="kicker">3. lépés</span>
-          <h3>Weboldal elkészítése</h3>
-          <p>Elkészül a személyre szabott oldal, amely már használható is.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<h3>Standard</h3>
+<div class="price">69.000 Ft</div>
+<p>Erősebb megjelenés + jobb felépítés</p>
+<a class="btn" href="#kapcsolat">Megrendelem</a>
+</div>
 
-  <section class="section reveal">
-    <div class="container grid-2">
-      <div class="card">
-        <span class="kicker">Kinek ajánlott?</span>
-        <h3>Azoknak, akik gyorsan szeretnének modern weboldalt</h3>
-        <p>Ideális választás szakiknak, helyi szolgáltatóknak, kisebb cégeknek és induló projektekhez.</p>
+<div class="card">
+<h3>Prémium</h3>
+<div class="price">89.000 Ft</div>
+<p>Komolyabb, egyedibb weboldal</p>
+<a class="btn" href="#kapcsolat">Megrendelem</a>
+</div>
 
-        <div class="feature-list">
-          <div class="feature-item">
-            <div class="feature-icon">✓</div>
-            <div>
-              <b>Szakiknak</b>
-              <span class="muted">Kőműves, burkoló, festő, villanyszerelő, vízszerelő, generálkivitelező.</span>
-            </div>
-          </div>
+</div>
+</div>
+</section>
 
-          <div class="feature-item">
-            <div class="feature-icon">✓</div>
-            <div>
-              <b>Szolgáltatóknak</b>
-              <span class="muted">Autószerelő, étterem, fogorvos, szépségipar, helyi vállalkozások.</span>
-            </div>
-          </div>
+<section id="kapcsolat" class="section">
+<div class="container">
 
-          <div class="feature-item">
-            <div class="feature-icon">✓</div>
-            <div>
-              <b>Induló projektekhez</b>
-              <span class="muted">Bemutatkozó oldal, landing page, hirdetési oldal vagy szolgáltatói weboldal.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<h2>Megrendelés</h2>
 
-      <div class="video-card">
-        <span class="kicker">Miért jó választás?</span>
-        <h3>Gyors indulás, profi megjelenés</h3>
-        <p class="muted">
-          A weboldal jól átlátható felépítést kap, könnyen áttekinthető tartalommal,
-          jól látható gombokkal és egyszerű kapcsolatfelvételi lehetőséggel.
-        </p>
-        <div class="video-frame has-placeholder"></div>
-      </div>
-    </div>
-  </section>
+<form action="mailto:cegweb26@gmail.com" method="post" enctype="text/plain">
 
-  <section id="referenciak" class="section reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Miért érdemes ezt választani?</h2>
-        <p>Gyors indulás, modern megjelenés és egyszerű megrendelési folyamat.</p>
-      </div>
+<input type="text" name="Nev" placeholder="Név" required>
+<input type="email" name="Email" placeholder="Email" required>
+<input type="text" name="Telefon" placeholder="Telefonszám">
 
-      <div class="grid-3">
-        <article class="card">
-          <span class="kicker">Gyors indulás</span>
-          <h3>Nem kell nulláról kezdeni</h3>
-          <p>Kész alapból indul a weboldal, így rövidebb idő alatt elkészülhet.</p>
-          <div class="muted">Gyorsabb indulás és átlátható folyamat</div>
-        </article>
+<select name="Sablon">
+<option>Építőipari</option>
+<option>Autószerelő</option>
+<option>Étterem</option>
+<option>Fogorvos</option>
+</select>
 
-        <article class="rating-card">
-          <span class="kicker">Ár-érték arány</span>
-          <div style="display:flex;align-items:end;gap:14px;margin:12px 0 8px">
-            <div class="rating-big">4.9</div>
-            <div>
-              <div class="stars">★★★★★</div>
-              <div class="muted">kedvező induló csomagok</div>
-            </div>
-          </div>
-          <p class="muted">Elérhető árú csomagokból lehet elindulni, egyedi megjelenéssel és gyors kivitelezéssel.</p>
-        </article>
+<select name="Csomag">
+<option>Alap</option>
+<option>Standard</option>
+<option>Prémium</option>
+</select>
 
-        <article class="card">
-          <span class="kicker">Átlátható ajánlat</span>
-          <h3>Egyértelmű csomagok, egyértelmű döntés</h3>
-          <p>A minta, az ár és a megrendelés egy helyen látható, így könnyebb kiválasztani a megfelelő megoldást.</p>
-          <div class="muted">Minta + csomag + megrendelés</div>
-        </article>
-      </div>
-    </div>
-  </section>
+<textarea name="Uzenet" placeholder="Írd le röviden mit szeretnél"></textarea>
 
-  <section id="kapcsolat" class="section reveal">
-    <div class="container">
-      <div class="section-head">
-        <h2>Megrendelés / ajánlatkérés</h2>
-        <p>Írd meg, melyik mintát választottad, milyen csomagot szeretnél, és milyen weboldalra van szükséged.</p>
-      </div>
+<button class="btn" type="submit">Megrendelés elküldése</button>
 
-      <div class="form-wrap">
-        <form id="quoteForm">
-          <input type="hidden" name="Oldal" value="SzakiWeb főoldal">
+</form>
 
-          <div class="form-grid">
-            <input name="Név" placeholder="Név" required>
-            <input name="E-mail" type="email" placeholder="E-mail" required>
-            <input name="Telefonszám" placeholder="Telefonszám">
+<br>
 
-            <select name="Vállalkozás típusa">
-              <option>Építőipar</option>
-              <option>Autószerviz</option>
-              <option>Étterem</option>
-              <option>Fogorvos</option>
-              <option>Egyéb</option>
-            </select>
+<p style="color:#aaa;">
+Vagy írj ide: <b>cegweb26@gmail.com</b>
+</p>
 
-            <select name="Kiválasztott sablon" id="templateSelect">
-              <option value="">Kiválasztott sablon</option>
-              <option>Építőipari prémium sablon</option>
-              <option>Autószerelő prémium sablon</option>
-              <option>Étterem prémium sablon</option>
-              <option>Fogorvosi prémium sablon</option>
-              <option>Még nem tudom</option>
-            </select>
+</div>
+</section>
 
-            <select name="Kért csomag" id="packageSelect">
-              <option value="">Kért csomag</option>
-              <option>Alap – 49 000 Ft</option>
-              <option>Standard – 69 000 Ft</option>
-              <option>Prémium – 89 000 Ft</option>
-              <option>Még nem tudom</option>
-            </select>
-          </div>
+<footer>
+© 2026 SzakiWeb
+</footer>
 
-          <textarea name="Üzenet" placeholder="Példa: építőipari mintát szeretnék Standard csomagban, saját névvel, elérhetőségekkel és pár képpel." required></textarea>
-
-          <div class="form-actions">
-            <button class="btn" type="submit">Megrendelés indítása</button>
-            <a class="btn-outline" href="mailto:bartha.attila76@gmail.com?subject=SzakiWeb%20ajanlatkeres">Inkább e-mailt írok</a>
-          </div>
-
-          <div class="notice">A sablon és a csomag kiválasztása után a megrendelés gyorsabban elindítható.</div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <div class="sticky-cta">
-    <span>Kész weboldal, gyors indulással</span>
-    <a class="btn" href="#kapcsolat">Kérek weboldalt</a>
-  </div>
-
-  <button class="chat-launch" id="chatLaunch">Chat</button>
-  <div class="chatbox" id="chatbox">
-    <div class="chat-head">
-      <b>Weboldal asszisztens</b>
-      <button class="btn-outline" id="chatClose" style="padding:8px 12px">Bezár</button>
-    </div>
-    <div class="chat-body" id="chatBody">
-      <div class="quick">
-        <button data-chat="Mennyibe kerül?">Árak</button>
-        <button data-chat="Mennyi idő alatt készül el?">Határidő</button>
-        <button data-chat="Mit tud a weboldal?">Funkciók</button>
-        <button data-chat="Melyik csomag a legjobb?">Csomag ajánlás</button>
-      </div>
-    </div>
-    <div class="chat-input">
-      <input id="chatText" type="text" placeholder="Írj ide egy kérdést...">
-      <button id="chatSend">Küldés</button>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer-box">
-      <div>© 2026 SzakiWeb</div>
-      <div>Kész weboldalak • személyre szabás • megrendelés</div>
-    </div>
-  </footer>
-
-  <script src="assets/script.js"></script>
 </body>
 </html>
