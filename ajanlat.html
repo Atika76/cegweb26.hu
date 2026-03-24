@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyors ajánlatkérés – SzakiWeb</title>
+  <meta name="description" content="Gyors ajánlatkérés weboldal készítéshez. Írj WhatsAppon vagy emailben.">
+  <meta name="theme-color" content="#0b0f14">
+
+  <meta property="og:title" content="Gyors ajánlatkérés – SzakiWeb">
+  <meta property="og:description" content="Kész vagy egyedi weboldal vállalkozóknak. Írj most WhatsAppon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atika76.github.io/szakiweb/ajanlat.html">
+  <meta property="og:image" content="https://atika76.github.io/szakiweb/assets/preview-main.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#10192b;
+      --text:#f5f7fb;
+      --muted:#bcc6d7;
+      --green:#22c55e;
+      --line:rgba(255,255,255,.08);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(34,197,94,.10), transparent 26%),
+        linear-gradient(180deg, #081019 0%, #0b0f14 100%);
+    }
+
+    .wrap{
+      width:min(920px, calc(100% - 28px));
+      margin:0 auto;
+      padding:28px 0 110px;
+    }
+
+    .back{
+      display:inline-flex;
+      margin-bottom:22px;
+      color:#cdd6e4;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .hero{
+      background:linear-gradient(180deg, rgba(16,25,43,.98), rgba(11,18,32,.98));
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:34px 26px;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      text-align:center;
+    }
+
+    .badge{
+      display:inline-flex;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(34,197,94,.12);
+      border:1px solid rgba(34,197,94,.25);
+      color:#bef2cd;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2rem,4.4vw,3.5rem);
+      line-height:1.05;
+      letter-spacing:-1px;
+    }
+
+    .lead{
+      max-width:700px;
+      margin:0 auto 22px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:1.05rem;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+
+    .btn,.btn-outline{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:14px;
+      font-weight:800;
+      text-decoration:none;
+      transition:.18s ease;
+    }
+
+    .btn{
+      background:linear-gradient(180deg, #2fe06f 0%, #22c55e 100%);
+      color:#07120b;
+      box-shadow:0 10px 24px rgba(34,197,94,.24);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn:hover,.btn-outline:hover{transform:translateY(-1px)}
+
+    .price-line{
+      color:#9ce0b4;
+      font-weight:800;
+      margin-top:8px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(16,25,43,.98), rgba(11,18,32,.98));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 12px 30px rgba(0,0,0,.28);
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.2rem;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .contact{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .contact-box{
+      background:linear-gradient(180deg, rgba(16,25,43,.98), rgba(11,18,32,.98));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+    }
+
+    .contact-box h2{
+      margin:0 0 12px;
+      font-size:1.4rem;
+    }
+
+    .contact-box p{
+      margin:0 0 16px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .contact-item{
+      display:block;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      font-weight:700;
+      margin-bottom:12px;
+      color:#eef3fb;
+      word-break:break-word;
+      text-decoration:none;
+    }
+
+    .contact-item small{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .mini{
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.6;
+    }
+
+    .sticky{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(7,10,14,.94);
+      backdrop-filter:blur(12px);
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:12px 14px;
+    }
+
+    .sticky-inner{
+      width:min(920px, calc(100% - 4px));
+      margin:0 auto;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .sticky-text{
+      font-weight:700;
+      color:#edf2fa;
+    }
+
+    .sticky-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 820px){
+      .grid,.contact{grid-template-columns:1fr}
+      .sticky-inner,.sticky-actions,.actions{flex-direction:column;align-items:stretch}
+      .btn,.btn-outline{width:100%}
+      .sticky-text{text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Vissza a főoldalra</a>
+
+    <section class="hero">
+      <div class="badge">Gyors ajánlatkérés</div>
+      <h1>Weboldalt szeretnél a vállalkozásodnak?</h1>
+      <p class="lead">
+        Kérhetsz kész mintából induló vagy egyedi weboldalt is. Ha gyorsan szeretnél haladni,
+        írj WhatsAppon, és el lehet indulni rögtön.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="https://wa.me/36704292162?text=Szia%2C%20weboldalt%20szeretn%C3%A9k." target="_blank" rel="noopener">Írok WhatsAppon</a>
+        <a class="btn-outline" href="mailto:cegweb26@gmail.com?subject=Weboldal%20ajanlatkeres">Emailt írok</a>
+      </div>
+
+      <div class="price-line">Weboldal már 49.000 Ft-tól</div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Kész minta</h3>
+        <p>Gyorsabb indulás, egyszerűbb választás, modern megjelenés.</p>
+      </div>
+      <div class="card">
+        <h3>Egyedi megoldás</h3>
+        <p>Ha nem a minták közül választanál, egyedi weboldal is kérhető.</p>
+      </div>
+      <div class="card">
+        <h3>Egyszerű kapcsolat</h3>
+        <p>WhatsApp, email vagy a főoldali űrlap használható.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-box">
+        <h2>Kapcsolat</h2>
+        <p>Az alábbi elérhetőségeken lehet ajánlatot kérni.</p>
+
+        <a class="contact-item" href="https://wa.me/36704292162?text=Szia%2C%20weboldalt%20szeretn%C3%A9k." target="_blank" rel="noopener">
+          WhatsApp
+          <small>+36 70 429 2162</small>
+        </a>
+
+        <a class="contact-item" href="mailto:cegweb26@gmail.com?subject=Weboldal%20ajanlatkeres">
+          E-mail
+          <small>cegweb26@gmail.com</small>
+        </a>
+      </div>
+
+      <div class="contact-box">
+        <h2>Mit érdemes megírni?</h2>
+        <p class="mini">
+          Írd meg röviden, milyen vállalkozásod van, milyen típusú weboldalt szeretnél,
+          és hogy inkább kész mintából indulnál vagy egyedi megoldást kérsz.
+        </p>
+        <p class="mini">
+          Példa: „Autószervizhez szeretnék weboldalt, egyszerű, modern stílusban.”
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div class="sticky">
+    <div class="sticky-inner">
+      <div class="sticky-text">Ha szeretnéd, most rögtön el tud indulni az ajánlatkérés</div>
+      <div class="sticky-actions">
+        <a class="btn" href="https://wa.me/36704292162?text=Szia%2C%20weboldalt%20szeretn%C3%A9k." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn-outline" href="index.html">Főoldal</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
