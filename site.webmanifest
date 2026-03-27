@@ -1,12 +1,12 @@
 {
-  "name": "SzakiWeb – Weboldalkészítés",
-  "short_name": "SzakiWeb",
-  "description": "Modern weboldalak vállalkozóknak, szakiknak és szolgáltatóknak.",
+  "name": "Bartha Attila Weboldalkészítés",
+  "short_name": "BarthaWeb",
+  "description": "Modern weboldalak vállalkozóknak, szakiknak és szolgáltatóknak. WhatsApp és telefonos kapcsolatfelvétellel.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0b0f14",
-  "theme_color": "#0b0f14",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
   "icons": [
     {
       "src": "assets/android-chrome-192x192.png",

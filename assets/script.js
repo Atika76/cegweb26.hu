@@ -13,11 +13,11 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 const chatbotData = {
   default:{
-    intro:"Szia! Segítek eligazodni az árak, határidő, funkciók, domain, tárhely és a neked való csomag között. Ha leírod, milyen vállalkozásod van, konkrétabbat mondok.",
+    intro:"Szia! Bartha Attila weboldal asszisztense vagyok. Segítek árban, csomagban, határidőben és abban is, milyen weboldal illik a vállalkozásodhoz. Ha leírod, mivel foglalkozol, konkrét javaslatot adok.",
     price:"Jelenleg 3 csomag érhető el: <b>Alap 49 000 Ft</b>, <b>Standard 69 000 Ft</b>, <b>Prémium 89 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
     time:"Általában <b>2–3 napon belül</b> el tud indulni a munka. Egy egyszerű bemutatkozó oldal gyorsabban elkészül, több aloldalnál vagy extra tartalomnál több idő kellhet.",
     features:"A weboldal lehet <b>mobilbarát</b>, tartalmazhat <b>kapcsolati űrlapot</b>, szolgáltatásblokkokat, referencia részt, árakat, GYIK-et, videós blokkot, Google térképet és gyors kapcsolatfelvételi gombokat.",
-    contact:"Az oldal alján az <b>Ajánlatkérés</b> résznél tudsz írni. A gomb megnyit egy előre kitöltött e-mailt, így biztonságosan el tudod küldeni az igényedet.",
+    contact:"Kapcsolat: <b>Bartha Attila</b> • <b>tel: +36 70 429 2162</b> • <b>WhatsApp</b> is elérhető. Az ajánlatkérő gomb biztonságosan a saját levelezőt nyitja meg előre kitöltött adatokkal.",
     seo:"Igen, a weboldal úgy készülhet, hogy gyors, mobilbarát és Google számára is jól átlátható legyen. Ez segít a bizalomépítésben és abban, hogy könnyebben rád találjanak.",
     pages:"Egy alap bemutatkozó oldal általában tartalmaz <b>főoldalt</b>, szolgáltatás részt, kapcsolat blokkot és ajánlatkérő lehetőséget. Igény szerint lehet több aloldal is.",
     domain:"Domain és tárhely beállításban is tudok segíteni. Ha még nincs saját domained, az induláshoz ezt is meg lehet oldani.",
@@ -132,14 +132,14 @@ function smartReply(msg){
   const data = chatbotData[type] || chatbotData.default;
   const packageHint = packageAdvice(msg, type);
 
-  if (/(szia|hello|hali|jo napot)/.test(t)) return pageData.intro || chatbotData.default.intro;
+  if (/(szia|hello|hali|jo napot)/.test(t)) return (pageData.intro || chatbotData.default.intro) + "<br><br><b>Bartha Attila</b> vagyok weboldalkészítésben. Írd meg nyugodtan a vállalkozásod típusát, és azonnal mondok egy jó irányt.";
   if (/(mit ajanlasz|mit javasolsz|segits valasztani|nem tudom melyik|melyik legyen)/.test(t)) return buildContextReply(type);
   if (/(vallalkozasom|cegem|szakmam|mivel foglalkozom|mire van szuksegem)/.test(t)) return detailedNeedReply(msg, type);
-  if (/(ar|mennyibe|csomag|fizet|koltseg|dij)/.test(t)) return packageHint || chatbotData.default.price;
+  if (/(ar|mennyibe|csomag|fizet|koltseg|dij)/.test(t)) return (packageHint || chatbotData.default.price) + "<br><br>Ha leírod, milyen vállalkozásra kell az oldal, pontosabban megmondom, hogy az <b>Alap</b>, <b>Standard</b> vagy <b>Prémium</b> éri-e meg neked a legjobban.";
   if (/(olcso|draga|sporolni|kezdesnek|indulasnak)/.test(t)) return "Kezdésnek az <b>Alap 49 000 Ft</b> is jó lehet, de ha fontos a komolyabb bizalomépítés és több tartalom, a <b>Standard 69 000 Ft</b> szokott a legjobb ár-érték arányú választás lenni.";
   if (/(mennyi ido|mikor|hatarido|elkeszul|keszul el|indul)/.test(t)) return chatbotData.default.time + "<br><br>Ha sürgős, az ajánlatkérésben írd oda, hogy <b>sürgős indulás</b>, így ehhez igazítható az ütemezés.";
   if (/(mit tud|funkcio|tartalmaz|mi van benne|mire kepes)/.test(t)) return chatbotData.default.features;
-  if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek)/.test(t)) return chatbotData.default.contact + "<br><br>Az űrlap nem külső gyanús oldalra visz, hanem biztonságosan a saját levelezőt nyitja meg kitöltött adatokkal.";
+  if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek|whatsapp|hivas|hivni|tel)/.test(t)) return chatbotData.default.contact + "<br><br><b>WhatsApp:</b> kattints a zöld gombra vagy írd be: <b>+36 70 429 2162</b>.<br><b>Hívás:</b> a bal alsó gombbal azonnal indítható.<br><br>Az űrlap nem külső gyanús oldalra visz, hanem biztonságosan a saját levelezőt nyitja meg kitöltött adatokkal.";
   if (/(seo|google|kereso|talalat)/.test(t)) return chatbotData.default.seo;
   if (/(oldal|aloldal|mennyi oldal|oldalak)/.test(t)) return chatbotData.default.pages;
   if (/(domain|tarhely|hosting)/.test(t)) return chatbotData.default.domain;
@@ -151,9 +151,9 @@ function smartReply(msg){
   if (/(epitoipar|autoszerviz|etterem|fogorvos|vallalkozasom|vallalkozom)/.test(t)) return detailedNeedReply(msg, type);
 
   const words = t.split(/\s+/).filter(Boolean);
-  if (words.length <= 2) return chatbotData.default.fallback;
+  if (words.length <= 2) return chatbotData.default.fallback + "<br><br>Példák: <b>burkoló vagyok, melyik csomag jó?</b> • <b>kellene WhatsApp gomb és hívás gomb</b> • <b>mennyi idő alatt készül el?</b>";
 
-  return (data.recommend || chatbotData.default.recommend) + "<br><br>" + chatbotData.default.fallback;
+  return (data.recommend || chatbotData.default.recommend) + "<br><br><b>Bartha Attila</b> olyan oldalt készít, amin jól látszik a szolgáltatásod, könnyű kapcsolatba lépni veled, és mobilon is profi a megjelenés.<br><br>" + chatbotData.default.fallback;
 }
 
 function ensureStart(){
