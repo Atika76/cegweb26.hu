@@ -13,19 +13,19 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 const chatbotData = {
   default:{
-    intro:"Szia! Bartha Attila weboldal asszisztense vagyok. Segítek kiválasztani a jó sablont, csomagot és azt is, hogyan nézzen ki az oldal úgy, hogy bizalmat építsen és több megkeresést hozzon. Ha leírod, mivel foglalkozol, konkrét javaslatot adok.",
-    price:"Jelenleg 3 csomag érhető el: <b>Alap 49 000 Ft</b>, <b>Standard 69 000 Ft</b>, <b>Prémium 89 000 Ft</b>. A legtöbb vállalkozónak a <b>Standard</b> adja a legjobb első benyomást, mert erősebb a felépítése és jobban támogatja a kapcsolatfelvételt.",
+    intro:"Szia! Segítek eligazodni az árak, határidő, funkciók, domain, tárhely és a neked való csomag között. Ha leírod, milyen vállalkozásod van, konkrétabbat mondok.",
+    price:"Jelenleg 3 csomag érhető el: <b>Alap 49 000 Ft</b>, <b>Standard 69 000 Ft</b>, <b>Prémium 89 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
     time:"Általában <b>2–3 napon belül</b> el tud indulni a munka. Egy egyszerű bemutatkozó oldal gyorsabban elkészül, több aloldalnál vagy extra tartalomnál több idő kellhet.",
     features:"A weboldal lehet <b>mobilbarát</b>, tartalmazhat <b>kapcsolati űrlapot</b>, szolgáltatásblokkokat, referencia részt, árakat, GYIK-et, videós blokkot, Google térképet és gyors kapcsolatfelvételi gombokat.",
-    contact:"Kapcsolat: <b>Bartha Attila</b> • <b>tel: +36 70 429 2162</b> • <b>WhatsApp</b> • <b>cegweb26@gmail.com</b>. Írhatsz WhatsAppon, telefonon vagy e-mailben is, attól függően, melyik kényelmesebb neked.",
+    contact:"Az oldal alján az <b>Ajánlatkérés</b> résznél tudsz írni. Az ajánlatkérésnél WhatsAppon, telefonon vagy előre kitöltött e-mailben is el tudsz indulni, így gyorsabb az egyeztetés.",
     seo:"Igen, a weboldal úgy készülhet, hogy gyors, mobilbarát és Google számára is jól átlátható legyen. Ez segít a bizalomépítésben és abban, hogy könnyebben rád találjanak.",
     pages:"Egy alap bemutatkozó oldal általában tartalmaz <b>főoldalt</b>, szolgáltatás részt, kapcsolat blokkot és ajánlatkérő lehetőséget. Igény szerint lehet több aloldal is.",
-    domain:"Domain és tárhely beállításban is tudok segíteni. Profi benyomáshoz érdemes saját domaint, céges e-mailt és gyors, mobilbarát oldalt használni, mert ez már az első másodpercekben komolyabb képet ad.",
-    design:"A minta teljesen testre szabható: színek, szövegek, képek, gombok, blokkok és a vállalkozásodhoz illő stílus is módosítható. A cél nem csak az, hogy szép legyen, hanem hogy profin nézzen ki és megkeresésre ösztönözzön.",
+    domain:"Domain és tárhely beállításban is tudok segíteni. Ha még nincs saját domained, az induláshoz ezt is meg lehet oldani.",
+    design:"A minta teljesen testre szabható: színek, szövegek, képek, gombok, blokkok és a vállalkozásodhoz illő stílus is módosítható.",
     examples:"A mostani minták között van építőipari, autószerelő, éttermi és fogorvosi stílus. Ezek kiindulási alapok, bármelyik átalakítható a te vállalkozásodra.",
     recommend:"Ha gyorsan induló, igényes bemutatkozó oldal kell, általában a <b>Standard</b> csomag a legjobb választás. Ha erősebb megjelenés, több blokk vagy prémium hatás kell, akkor a <b>Prémium</b> éri meg jobban.",
-    trust:"A legtöbb érdeklődőt általában ez hozza: <b>jó első benyomás</b>, egyértelmű szolgáltatások, referenciák, jól látható WhatsApp / telefon / e-mail gombok, és egy rövid, erős szöveg arról, miért téged válasszanak.",
-    fallback:"Ebben is segítek. Írd le nyugodtan egy mondatban, mivel foglalkozol és mire kell az oldal, például: <b>építőipari cégem van, kellene referencia és ajánlatkérő</b> vagy <b>autószerviznek melyik csomag a legjobb</b>."
+    trust:"A legtöbb érdeklődőt általában ez hozza: <b>erős főcím</b>, bizalomépítő referenciák, WhatsApp vagy telefonos gyors kapcsolat, és egy olyan oldal, ami mobilon is profi.",
+    fallback:"Ebben is segítek. Írd le egy mondatban, mivel foglalkozol, és megmondom, milyen felépítés, csomag és kapcsolatfelvételi megoldás hozhat több megrendelőt."
   },
   epitoipar:{
     intro:"Építőipari sablonhoz kérdezhetsz szolgáltatásokról, referencia blokkról, ajánlatkérésről vagy arról, mit érdemes kiemelni.",
@@ -132,28 +132,28 @@ function smartReply(msg){
   const data = chatbotData[type] || chatbotData.default;
   const packageHint = packageAdvice(msg, type);
 
-  if (/(szia|hello|hali|jo napot)/.test(t)) return (pageData.intro || chatbotData.default.intro) + "<br><br><b>Bartha Attila</b> vagyok. Írd meg nyugodtan, mivel foglalkozol, és adok egy rövid, profi javaslatot sablonra, csomagra és arra is, hogyan lehetne több érdeklődőt hozni. Elérhetőség: <b>+36 70 429 2162</b> • <b>cegweb26@gmail.com</b>.";
+  if (/(szia|hello|hali|jo napot)/.test(t)) return pageData.intro || chatbotData.default.intro;
   if (/(mit ajanlasz|mit javasolsz|segits valasztani|nem tudom melyik|melyik legyen)/.test(t)) return buildContextReply(type);
   if (/(vallalkozasom|cegem|szakmam|mivel foglalkozom|mire van szuksegem)/.test(t)) return detailedNeedReply(msg, type);
-  if (/(ar|mennyibe|csomag|fizet|koltseg|dij)/.test(t)) return (packageHint || chatbotData.default.price) + "<br><br>Ha leírod, milyen vállalkozásra kell az oldal, pontosabban megmondom, hogy az <b>Alap</b>, <b>Standard</b> vagy <b>Prémium</b> éri-e meg neked a legjobban.";
+  if (/(ar|mennyibe|csomag|fizet|koltseg|dij)/.test(t)) return packageHint || chatbotData.default.price;
   if (/(olcso|draga|sporolni|kezdesnek|indulasnak)/.test(t)) return "Kezdésnek az <b>Alap 49 000 Ft</b> is jó lehet, de ha fontos a komolyabb bizalomépítés és több tartalom, a <b>Standard 69 000 Ft</b> szokott a legjobb ár-érték arányú választás lenni.";
   if (/(mennyi ido|mikor|hatarido|elkeszul|keszul el|indul)/.test(t)) return chatbotData.default.time + "<br><br>Ha sürgős, az ajánlatkérésben írd oda, hogy <b>sürgős indulás</b>, így ehhez igazítható az ütemezés.";
-  if (/(mit tud|funkcio|tartalmaz|mi van benne|mire kepes)/.test(t)) return chatbotData.default.features + "<br><br><b>Profi benyomáshoz</b> érdemes beletenni: erős főcímet, rövid előnyöket, referencia vagy értékelés blokkot, és jól látható kapcsolat gombokat.";
-  if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek|whatsapp|hivas|hivni|tel)/.test(t)) return chatbotData.default.contact + "<br><br><b>WhatsApp:</b> kattints a zöld gombra vagy írd be: <b>+36 70 429 2162</b>.<br><b>Hívás:</b> a kék gombbal azonnal indítható.<br><b>E-mail:</b> <b>cegweb26@gmail.com</b><br><br>Az űrlap biztonságosan a saját levelezőt nyitja meg kitöltött adatokkal.";
+  if (/(mit tud|funkcio|tartalmaz|mi van benne|mire kepes)/.test(t)) return chatbotData.default.features;
+  if (/(kapcsolat|elerhetoseg|email|telefon|whatsapp|ajanlatkeres|ajanlatot kerek)/.test(t)) return chatbotData.default.contact + "<br><br><b>Kapcsolat:</b><br>WhatsApp: <b>+36 70 429 2162</b><br>E-mail: <b>cegweb26@gmail.com</b><br><br>Ha gyorsan szeretnél indulni, WhatsAppon általában a legegyszerűbb megírni pár sorban, milyen weboldalt szeretnél.";
   if (/(seo|google|kereso|talalat)/.test(t)) return chatbotData.default.seo;
   if (/(oldal|aloldal|mennyi oldal|oldalak)/.test(t)) return chatbotData.default.pages;
   if (/(domain|tarhely|hosting)/.test(t)) return chatbotData.default.domain;
-  if (/(design|szin|szinek|stilus|egyedi|testreszab)/.test(t)) return chatbotData.default.design;
+  if (/(design|szin|szinek|stilus|egyedi|testreszab|profi|modern)/.test(t)) return chatbotData.default.design + "<br><br>A profi hatáshoz érdemes rövid főcímet, 3-4 erős előnyt, egy jól látható WhatsApp vagy telefon gombot és valódi bizalmi elemeket használni.";
   if (/(minta|pelda|referencia|sablon)/.test(t)) return chatbotData.default.examples;
   if (/(szolgaltatas|vallal|kezeles|muvelet|menu|etlap)/.test(t) && data.services) return data.services;
   if (/(ajanlat|idopont|foglal|felmeres)/.test(t) && data.quote) return data.quote;
-  if (/(tipp|javaslat|mi fontos|hogyan legyen jobb|jobb erdeklodo|tobb ugyfel|bizalom)/.test(t)) return (data.tips || chatbotData.default.trust) + "<br><br>A legjobb eredményt az hozza, ha fent van egy erős főcím, rövid előnylista, referencia vagy értékelés, jól látható WhatsApp / telefon / e-mail gomb, és egy egyszerű ajánlatkérő blokk.";
+  if (/(tipp|javaslat|mi fontos|hogyan legyen jobb|jobb erdeklodo|tobb ugyfel|bizalom)/.test(t)) return (data.tips || chatbotData.default.trust) + "<br><br>A legjobb eredményt az hozza, ha fent van egy erős főcím, rövid előnylista, referencia vagy értékelés, és jól látható ajánlatkérő gomb.";
   if (/(epitoipar|autoszerviz|etterem|fogorvos|vallalkozasom|vallalkozom)/.test(t)) return detailedNeedReply(msg, type);
 
   const words = t.split(/\s+/).filter(Boolean);
-  if (words.length <= 2) return chatbotData.default.fallback + "<br><br>Példák: <b>burkoló vagyok, melyik csomag jó?</b> • <b>kellene WhatsApp gomb és hívás gomb</b> • <b>mennyi idő alatt készül el?</b>";
+  if (words.length <= 2) return chatbotData.default.fallback;
 
-  return (data.recommend || chatbotData.default.recommend) + "<br><br><b>Bartha Attila</b> olyan oldalt készít, ami nemcsak szép, hanem üzletileg is erős: jól látszik a szolgáltatásod, könnyű kapcsolatba lépni veled, és mobilon is profi a megjelenés.<br><br>" + chatbotData.default.fallback;
+  return (data.recommend || chatbotData.default.recommend) + "<br><br>A jobb első benyomás érdekében javaslom a jól látható kapcsolat gombokat, rövid előnylistát és 1-2 bizalmi blokkot is." + "<br><br>" + chatbotData.default.fallback;
 }
 
 function ensureStart(){
@@ -259,7 +259,7 @@ document.querySelectorAll('form').forEach(form=>{
     e.preventDefault();
     const notice = form.querySelector('.notice');
     if (notice){
-      notice.innerHTML = 'Az ajánlatkérés most biztonságosan a saját levelezőprogramot nyitja meg előre kitöltött adatokkal. Ha gyorsabb, írj közvetlenül WhatsAppon vagy ide: cegweb26@gmail.com.';
+      notice.innerHTML = 'Az ajánlatkérés most biztonságosan a saját levelezőprogramot nyitja meg előre kitöltött adatokkal. Ellenőrizd az üzenetet, majd küldd el.';
     }
     window.location.href = buildMailtoFromForm(form);
     setTimeout(()=>{
