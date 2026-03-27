@@ -1,24 +1,20 @@
 {
   "name": "Bartha Attila Weboldalkészítés",
   "short_name": "BarthaWeb",
-  "description": "Modern weboldalak vállalkozóknak, szakiknak és szolgáltatóknak. WhatsApp és telefonos kapcsolatfelvétellel.",
   "start_url": "./index.html",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#07111f",
-  "theme_color": "#07111f",
+  "background_color": "#0b0f14",
+  "theme_color": "#0b0f14",
   "icons": [
     {
       "src": "assets/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "assets/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }

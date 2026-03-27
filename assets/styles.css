@@ -287,3 +287,12 @@ body.hide-sticky .sticky-cta{display:none}
 @media (max-width: 720px){
   .pro-contact{display:none}
 }
+
+
+.hero .card .btn-outline[href^="mailto:"]{border-color:rgba(124,211,255,.28);color:#d9f1ff}
+.hero .card .btn-outline[href^="mailto:"]:hover{border-color:rgba(124,211,255,.44);box-shadow:0 12px 30px rgba(35,108,173,.18)}
+.pro-contact .mail strong{color:#7dd3fc}
+.pro-contact .mail span{color:#cfe8ff}
+.brand span{letter-spacing:.01em}
+.notice{font-weight:600}
+.chat-body .bubble b{color:#fff}
