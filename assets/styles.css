@@ -266,33 +266,23 @@ body.hide-sticky .sticky-cta{display:none}
 }
 
 
-.contact-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.contact-card{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-decoration:none;color:#fff;transition:.2s transform,.2s border-color,.2s background}
-.contact-card:hover{transform:translateY(-2px);border-color:rgba(245,197,66,.35);background:rgba(255,255,255,.06)}
-.contact-ico{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:rgba(245,197,66,.12);border:1px solid rgba(245,197,66,.18);font-size:20px;flex:0 0 auto}
-.contact-card strong{display:block;font-size:17px;margin-bottom:4px}
-.contact-card small{display:block;color:var(--muted);font-size:13px}
-.owner-badge{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#dce8ff;font-weight:700}
-.owner-badge b{color:#fff}
-.owner-badge .mini{color:#ffd56a}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.trust-mini{padding:18px;border-radius:20px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}
-.trust-mini h4{margin:0 0 8px;font-size:18px}
-.trust-mini p{margin:0;color:var(--muted);line-height:1.7}
-.owner-section{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
-.owner-box{padding:24px;border-radius:26px;background:linear-gradient(180deg, rgba(16,27,48,.88), rgba(10,20,37,.78));border:1px solid var(--line);box-shadow:var(--shadow)}
-.owner-box h3{margin:0 0 10px;font-size:32px}
-.owner-box p{margin:0 0 16px;color:var(--muted);line-height:1.75}
-.owner-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.owner-list li::before{content:"✓";color:#ffd56a;margin-right:10px}
-.quick-contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-.quick-contact .btn,.quick-contact .btn-outline{min-height:48px}
-.whatsapp-float{position:fixed;left:18px;bottom:18px;z-index:44;display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;text-decoration:none;font-size:28px;background:linear-gradient(135deg,#28d564,#18a34a);box-shadow:0 12px 36px rgba(40,213,100,.28);border:1px solid rgba(255,255,255,.15)}
-.whatsapp-float span{display:none}
-.chat-launch{bottom:94px}
-.chatbox{bottom:170px}
-.footer-contacts{display:flex;gap:18px;flex-wrap:wrap;align-items:center;color:#d5e2fa}
-.footer-contacts a{color:#d5e2fa;text-decoration:none}
-.footer-contacts a:hover{color:#ffd56a}
-@media (max-width:980px){.contact-strip,.trust-grid,.owner-section{grid-template-columns:1fr}}
-@media (max-width:720px){.whatsapp-float{left:auto;right:18px;bottom:18px;width:58px;height:58px}.chat-launch{bottom:86px;right:18px}.chatbox{bottom:156px}.contact-card strong{font-size:16px}}
+.brand span{font-weight:800;letter-spacing:-.02em}
+.brand-highlight{display:inline-flex;align-items:center;gap:10px;margin:18px 0 10px;padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#dbe7fb;font-weight:700}
+.contact-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 26px}
+.contact-chip{display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#eff5ff;text-decoration:none;font-weight:700}
+.contact-chip small{display:block;color:#9cb0cf;font-weight:600}
+.contact-chip strong{display:block;color:#fff;font-size:15px}
+.contact-chip:hover{transform:translateY(-2px);border-color:rgba(245,197,66,.25)}
+.contact-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:12px;background:rgba(245,197,66,.12);color:#ffd86c;flex:0 0 auto}
+.why-choose-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why-card{padding:20px;border-radius:24px;background:linear-gradient(180deg, rgba(16,27,48,.86), rgba(10,20,37,.78));border:1px solid var(--line);box-shadow:var(--shadow)}
+.why-card h3{margin:10px 0 8px;font-size:24px}
+.why-card p{margin:0;color:var(--muted);line-height:1.7}
+.contact-float{position:fixed;right:18px;bottom:96px;z-index:44;display:grid;gap:10px}
+.contact-float a{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;color:#fff;text-decoration:none;font-weight:800;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+.contact-float .wa{background:linear-gradient(135deg,#20c75a,#1ea74c)}
+.contact-float .call{background:linear-gradient(135deg,#4f7cff,#2a57d8)}
+.contact-float .mail{background:linear-gradient(135deg,#14284a,#0c1830)}
+.hero-note{margin-top:14px;color:#9cb0cf;font-size:15px;line-height:1.7}
+@media (max-width:980px){.contact-bar,.why-choose-grid{grid-template-columns:1fr}.contact-float{right:10px;bottom:88px}.contact-float a{padding:10px 14px;font-size:14px}}
+@media (max-width:720px){.contact-float .mail{display:none}}

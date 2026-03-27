@@ -17,15 +17,15 @@ const chatbotData = {
     price:"Jelenleg 3 csomag érhető el: <b>Alap 49 000 Ft</b>, <b>Standard 69 000 Ft</b>, <b>Prémium 89 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
     time:"Általában <b>2–3 napon belül</b> el tud indulni a munka. Egy egyszerű bemutatkozó oldal gyorsabban elkészül, több aloldalnál vagy extra tartalomnál több idő kellhet.",
     features:"A weboldal lehet <b>mobilbarát</b>, tartalmazhat <b>kapcsolati űrlapot</b>, szolgáltatásblokkokat, referencia részt, árakat, GYIK-et, videós blokkot, Google térképet és gyors kapcsolatfelvételi gombokat.",
-    contact:"Az oldal alján az <b>Ajánlatkérés</b> résznél tudsz írni. Az ajánlatkérésnél WhatsAppon, telefonon vagy előre kitöltött e-mailben is el tudsz indulni, így gyorsabb az egyeztetés.",
+    contact:"Írhatsz WhatsAppon, e-mailben vagy telefonon is. A megrendelés gomb biztonságosan a saját leveleződet nyitja meg előre kitöltött adatokkal, így gyorsan el tudod küldeni az igényedet.",
     seo:"Igen, a weboldal úgy készülhet, hogy gyors, mobilbarát és Google számára is jól átlátható legyen. Ez segít a bizalomépítésben és abban, hogy könnyebben rád találjanak.",
     pages:"Egy alap bemutatkozó oldal általában tartalmaz <b>főoldalt</b>, szolgáltatás részt, kapcsolat blokkot és ajánlatkérő lehetőséget. Igény szerint lehet több aloldal is.",
     domain:"Domain és tárhely beállításban is tudok segíteni. Ha még nincs saját domained, az induláshoz ezt is meg lehet oldani.",
     design:"A minta teljesen testre szabható: színek, szövegek, képek, gombok, blokkok és a vállalkozásodhoz illő stílus is módosítható.",
     examples:"A mostani minták között van építőipari, autószerelő, éttermi és fogorvosi stílus. Ezek kiindulási alapok, bármelyik átalakítható a te vállalkozásodra.",
     recommend:"Ha gyorsan induló, igényes bemutatkozó oldal kell, általában a <b>Standard</b> csomag a legjobb választás. Ha erősebb megjelenés, több blokk vagy prémium hatás kell, akkor a <b>Prémium</b> éri meg jobban.",
-    trust:"A legtöbb érdeklődőt általában ez hozza: <b>erős főcím</b>, bizalomépítő referenciák, WhatsApp vagy telefonos gyors kapcsolat, és egy olyan oldal, ami mobilon is profi.",
-    fallback:"Ebben is segítek. Írd le egy mondatban, mivel foglalkozol, és megmondom, milyen felépítés, csomag és kapcsolatfelvételi megoldás hozhat több megrendelőt."
+    trust:"A legtöbb érdeklődőt általában ez hozza: <b>jó első benyomás</b>, egyértelmű szolgáltatások, referenciák, gyors kapcsolatfelvétel és mobilbarát megjelenés.",
+    fallback:"Ebben is segítek. Írd le nyugodtan egy mondatban, mivel foglalkozol és mire kell az oldal, például: <b>építőipari cégem van, kellene referencia és ajánlatkérő</b> vagy <b>autószerviznek melyik csomag a legjobb</b>."
   },
   epitoipar:{
     intro:"Építőipari sablonhoz kérdezhetsz szolgáltatásokról, referencia blokkról, ajánlatkérésről vagy arról, mit érdemes kiemelni.",
@@ -139,11 +139,11 @@ function smartReply(msg){
   if (/(olcso|draga|sporolni|kezdesnek|indulasnak)/.test(t)) return "Kezdésnek az <b>Alap 49 000 Ft</b> is jó lehet, de ha fontos a komolyabb bizalomépítés és több tartalom, a <b>Standard 69 000 Ft</b> szokott a legjobb ár-érték arányú választás lenni.";
   if (/(mennyi ido|mikor|hatarido|elkeszul|keszul el|indul)/.test(t)) return chatbotData.default.time + "<br><br>Ha sürgős, az ajánlatkérésben írd oda, hogy <b>sürgős indulás</b>, így ehhez igazítható az ütemezés.";
   if (/(mit tud|funkcio|tartalmaz|mi van benne|mire kepes)/.test(t)) return chatbotData.default.features;
-  if (/(kapcsolat|elerhetoseg|email|telefon|whatsapp|ajanlatkeres|ajanlatot kerek)/.test(t)) return chatbotData.default.contact + "<br><br><b>Kapcsolat:</b><br>WhatsApp: <b>+36 70 429 2162</b><br>E-mail: <b>cegweb26@gmail.com</b><br><br>Ha gyorsan szeretnél indulni, WhatsAppon általában a legegyszerűbb megírni pár sorban, milyen weboldalt szeretnél.";
+  if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek)/.test(t)) return 'Cégweb26 📞 <b>+36 70 429 2162</b><br>💬 WhatsApp: <b>+36 70 429 2162</b><br>✉️ E-mail: <b>cegweb26@gmail.com</b><br><br>Az űrlap nem külső oldalra visz, hanem biztonságosan a saját levelezőt nyitja meg kitöltött adatokkal.';
   if (/(seo|google|kereso|talalat)/.test(t)) return chatbotData.default.seo;
   if (/(oldal|aloldal|mennyi oldal|oldalak)/.test(t)) return chatbotData.default.pages;
   if (/(domain|tarhely|hosting)/.test(t)) return chatbotData.default.domain;
-  if (/(design|szin|szinek|stilus|egyedi|testreszab|profi|modern)/.test(t)) return chatbotData.default.design + "<br><br>A profi hatáshoz érdemes rövid főcímet, 3-4 erős előnyt, egy jól látható WhatsApp vagy telefon gombot és valódi bizalmi elemeket használni.";
+  if (/(design|szin|szinek|stilus|egyedi|testreszab)/.test(t)) return chatbotData.default.design;
   if (/(minta|pelda|referencia|sablon)/.test(t)) return chatbotData.default.examples;
   if (/(szolgaltatas|vallal|kezeles|muvelet|menu|etlap)/.test(t) && data.services) return data.services;
   if (/(ajanlat|idopont|foglal|felmeres)/.test(t) && data.quote) return data.quote;
@@ -151,9 +151,9 @@ function smartReply(msg){
   if (/(epitoipar|autoszerviz|etterem|fogorvos|vallalkozasom|vallalkozom)/.test(t)) return detailedNeedReply(msg, type);
 
   const words = t.split(/\s+/).filter(Boolean);
-  if (words.length <= 2) return chatbotData.default.fallback;
+  if (words.length <= 2) return 'Írd meg röviden, mivel foglalkozol és milyen weboldalt szeretnél. Például: <b>építőipari cégnek kell modern bemutatkozó oldal</b> vagy <b>autószerviznek kérek gyorsan elkészülő oldalt</b>.';
 
-  return (data.recommend || chatbotData.default.recommend) + "<br><br>A jobb első benyomás érdekében javaslom a jól látható kapcsolat gombokat, rövid előnylistát és 1-2 bizalmi blokkot is." + "<br><br>" + chatbotData.default.fallback;
+  return (data.recommend || chatbotData.default.recommend) + "<br><br>" + chatbotData.default.fallback;
 }
 
 function ensureStart(){
@@ -249,7 +249,7 @@ function buildMailtoFromForm(form){
   lines.push('Üzenet:');
   lines.push(message || '-');
   lines.push('');
-  lines.push('Üzenet küldve a Premium Weboldal Minták oldalról.');
+  lines.push('Üzenet küldve a Cégweb26 Weboldalkészítés oldalról.');
 
   return 'mailto:cegweb26@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(lines.join('\n'));
 }
