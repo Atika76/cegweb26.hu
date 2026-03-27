@@ -13,7 +13,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 const chatbotData = {
   default:{
-    intro:"Szia! Segítek eligazodni az árak, határidő, funkciók, domain, tárhely és a neked való csomag között. Ha leírod, milyen vállalkozásod van, konkrétabbat mondok.",
+    intro:"Szia! Segítek kiválasztani a neked való weboldalt. Írhatod, mivel foglalkozol, milyen stílust szeretnél, mennyi a kereted, és megmondom melyik csomag illik hozzád a legjobban.",
     price:"Jelenleg 3 csomag érhető el: <b>Alap 49 000 Ft</b>, <b>Standard 69 000 Ft</b>, <b>Prémium 89 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
     time:"Általában <b>2–3 napon belül</b> el tud indulni a munka. Egy egyszerű bemutatkozó oldal gyorsabban elkészül, több aloldalnál vagy extra tartalomnál több idő kellhet.",
     features:"A weboldal lehet <b>mobilbarát</b>, tartalmazhat <b>kapcsolati űrlapot</b>, szolgáltatásblokkokat, referencia részt, árakat, GYIK-et, videós blokkot, Google térképet és gyors kapcsolatfelvételi gombokat.",
@@ -23,8 +23,8 @@ const chatbotData = {
     domain:"Domain és tárhely beállításban is tudok segíteni. Ha még nincs saját domained, az induláshoz ezt is meg lehet oldani.",
     design:"A minta teljesen testre szabható: színek, szövegek, képek, gombok, blokkok és a vállalkozásodhoz illő stílus is módosítható.",
     examples:"A mostani minták között van építőipari, autószerelő, éttermi és fogorvosi stílus. Ezek kiindulási alapok, bármelyik átalakítható a te vállalkozásodra.",
-    recommend:"Ha gyorsan induló, igényes bemutatkozó oldal kell, általában a <b>Standard</b> csomag a legjobb választás. Ha erősebb megjelenés, több blokk vagy prémium hatás kell, akkor a <b>Prémium</b> éri meg jobban.",
-    trust:"A legtöbb érdeklődőt általában ez hozza: <b>jó első benyomás</b>, egyértelmű szolgáltatások, referenciák, gyors kapcsolatfelvétel és mobilbarát megjelenés.",
+    recommend:"Ha gyorsan induló, de már komoly benyomást keltő weboldalt szeretnél, általában a <b>Standard</b> csomag a legjobb választás. Ha erősebb első benyomás, több bizalomépítő blokk és prémiumabb összhatás kell, akkor a <b>Prémium</b> éri meg jobban.",
+    trust:"A legtöbb érdeklődőt általában ez hozza: <b>jó első benyomás</b>, erős főcím, egyértelmű szolgáltatások, bizalomépítő blokkok, gyors kapcsolatfelvétel és mobilbarát megjelenés.",
     fallback:"Ebben is segítek. Írd le nyugodtan egy mondatban, mivel foglalkozol és mire kell az oldal, például: <b>építőipari cégem van, kellene referencia és ajánlatkérő</b> vagy <b>autószerviznek melyik csomag a legjobb</b>."
   },
   epitoipar:{
@@ -139,7 +139,7 @@ function smartReply(msg){
   if (/(olcso|draga|sporolni|kezdesnek|indulasnak)/.test(t)) return "Kezdésnek az <b>Alap 49 000 Ft</b> is jó lehet, de ha fontos a komolyabb bizalomépítés és több tartalom, a <b>Standard 69 000 Ft</b> szokott a legjobb ár-érték arányú választás lenni.";
   if (/(mennyi ido|mikor|hatarido|elkeszul|keszul el|indul)/.test(t)) return chatbotData.default.time + "<br><br>Ha sürgős, az ajánlatkérésben írd oda, hogy <b>sürgős indulás</b>, így ehhez igazítható az ütemezés.";
   if (/(mit tud|funkcio|tartalmaz|mi van benne|mire kepes)/.test(t)) return chatbotData.default.features;
-  if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek)/.test(t)) return 'Cégweb26 📞 <b>+36 70 429 2162</b><br>💬 WhatsApp: <b>+36 70 429 2162</b><br>✉️ E-mail: <b>cegweb26@gmail.com</b><br><br>Az űrlap nem külső oldalra visz, hanem biztonságosan a saját levelezőt nyitja meg kitöltött adatokkal.';
+  if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek)/.test(t)) return 'Cégweb26 📞 <b>+36 70 429 2162</b><br>💬 WhatsApp: <b>+36 70 429 2162</b><br>✉️ E-mail: <b>cegweb26@gmail.com</b><br><br>Ha gyors választ szeretnél, a WhatsApp általában a leggyorsabb. Az űrlap a saját leveleződet nyitja meg kitöltött adatokkal.';
   if (/(seo|google|kereso|talalat)/.test(t)) return chatbotData.default.seo;
   if (/(oldal|aloldal|mennyi oldal|oldalak)/.test(t)) return chatbotData.default.pages;
   if (/(domain|tarhely|hosting)/.test(t)) return chatbotData.default.domain;
