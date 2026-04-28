@@ -14,7 +14,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const chatbotData = {
   default:{
     intro:"Szia! Segítek eligazodni az árak, határidő, funkciók, domain, tárhely és a neked való csomag között. Ha leírod, milyen vállalkozásod van, konkrétabbat mondok.",
-    price:"Jelenleg 3 csomag érhető el: <b>Alap 49 000 Ft</b>, <b>Standard 69 000 Ft</b>, <b>Prémium 89 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
+    price:"Jelenleg 3 csomag érhető el: <b>Alap 29 000 Ft</b>, <b>Standard 49 000 Ft</b>, <b>Prémium 69 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
     time:"Általában <b>2–3 napon belül</b> el tud indulni a munka. Egy egyszerű bemutatkozó oldal gyorsabban elkészül, több aloldalnál vagy extra tartalomnál több idő kellhet.",
     features:"A weboldal lehet <b>mobilbarát</b>, tartalmazhat <b>kapcsolati űrlapot</b>, szolgáltatásblokkokat, referencia részt, árakat, GYIK-et, videós blokkot, Google térképet és gyors kapcsolatfelvételi gombokat.",
     contact:"Írhatsz WhatsAppon, e-mailben vagy telefonon is. A megrendelés gomb biztonságosan a saját leveleződet nyitja meg előre kitöltött adatokkal, így gyorsan el tudod küldeni az igényedet.",
@@ -98,8 +98,8 @@ function packageAdvice(text, type){
   const t = normalize(text);
   const data = chatbotData[type] || chatbotData.default;
   if (/(melyik csomag|melyiket ajanlod|ajanlj|melyik eri meg|melyik jobb)/.test(t)) return data.recommend || chatbotData.default.recommend;
-  if (/(olcso|legolcsobb|alap csomag)/.test(t)) return "Ha a cél egy gyors, kulturált online jelenlét, az <b>Alap 49 000 Ft</b> jó indulás. Ha több bizalomépítő blokk is kell, inkább a <b>Standard</b> csomagot ajánlom.";
-  if (/(premium|legerosebb|komolyabb|tobb funkcio|tobb blokk)/.test(t)) return "Ha komolyabb megjelenést szeretnél több tartalommal és erősebb bizalomépítéssel, akkor a <b>Prémium 89 000 Ft</b> a legerősebb választás.";
+  if (/(olcso|legolcsobb|alap csomag)/.test(t)) return "Ha a cél egy gyors, kulturált online jelenlét, az <b>Alap 29 000 Ft</b> jó indulás. Ha több bizalomépítő blokk is kell, inkább a <b>Standard</b> csomagot ajánlom.";
+  if (/(premium|legerosebb|komolyabb|tobb funkcio|tobb blokk)/.test(t)) return "Ha komolyabb megjelenést szeretnél több tartalommal és erősebb bizalomépítéssel, akkor a <b>Prémium 69 000 Ft</b> a legerősebb választás.";
   return '';
 }
 
@@ -136,7 +136,7 @@ function smartReply(msg){
   if (/(mit ajanlasz|mit javasolsz|segits valasztani|nem tudom melyik|melyik legyen)/.test(t)) return buildContextReply(type);
   if (/(vallalkozasom|cegem|szakmam|mivel foglalkozom|mire van szuksegem)/.test(t)) return detailedNeedReply(msg, type);
   if (/(ar|mennyibe|csomag|fizet|koltseg|dij)/.test(t)) return packageHint || chatbotData.default.price;
-  if (/(olcso|draga|sporolni|kezdesnek|indulasnak)/.test(t)) return "Kezdésnek az <b>Alap 49 000 Ft</b> is jó lehet, de ha fontos a komolyabb bizalomépítés és több tartalom, a <b>Standard 69 000 Ft</b> szokott a legjobb ár-érték arányú választás lenni.";
+  if (/(olcso|draga|sporolni|kezdesnek|indulasnak)/.test(t)) return "Kezdésnek az <b>Alap 29 000 Ft</b> is jó lehet, de ha fontos a komolyabb bizalomépítés és több tartalom, a <b>Standard 49 000 Ft</b> szokott a legjobb ár-érték arányú választás lenni.";
   if (/(mennyi ido|mikor|hatarido|elkeszul|keszul el|indul)/.test(t)) return chatbotData.default.time + "<br><br>Ha sürgős, az ajánlatkérésben írd oda, hogy <b>sürgős indulás</b>, így ehhez igazítható az ütemezés.";
   if (/(mit tud|funkcio|tartalmaz|mi van benne|mire kepes)/.test(t)) return chatbotData.default.features;
   if (/(kapcsolat|elerhetoseg|email|telefon|ajanlatkeres|ajanlatot kerek)/.test(t)) return 'Cégweb26 📞 <b>+36 70 429 2162</b><br>💬 WhatsApp: <b>+36 70 429 2162</b><br>✉️ E-mail: <b>cegweb26@gmail.com</b><br><br>Az űrlap nem külső oldalra visz, hanem biztonságosan a saját levelezőt nyitja meg kitöltött adatokkal.';
