@@ -366,3 +366,6 @@ body.hide-sticky .sticky-cta{display:none}
   .brand-logo{max-width:104px}
 }
 
+
+/* Chat felület kikapcsolva: a gyors kapcsolat a fejlécben és a hamburger menüben van. */
+.chat-widget,.chat-body,.chat-input,#chatbox,#chatLaunch{display:none!important;}

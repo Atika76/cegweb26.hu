@@ -13,7 +13,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 const chatbotData = {
   default:{
-    intro:"Szia! Segítek eligazodni az árak, határidő, funkciók, domain, tárhely és a neked való csomag között. Ha leírod, milyen vállalkozásod van, konkrétabbat mondok.",
+    intro:"Szia! Segítek eligazodni az árak, határidő, funkciók, domain, tárhely és a megfelelő csomag között. Ha leírod, milyen vállalkozásod van, konkrétabbat mondok.",
     price:"Jelenleg 3 csomag érhető el: <b>Alap 29 000 Ft</b>, <b>Standard 49 000 Ft</b>, <b>Prémium 69 000 Ft</b>. Ha külön funkció, több aloldal vagy extra tartalom kell, egyedi ajánlat is kérhető.",
     time:"Általában <b>2–3 napon belül</b> el tud indulni a munka. Egy egyszerű bemutatkozó oldal gyorsabban elkészül, több aloldalnál vagy extra tartalomnál több idő kellhet.",
     features:"A weboldal lehet <b>mobilbarát</b>, tartalmazhat <b>kapcsolati űrlapot</b>, szolgáltatásblokkokat, referencia részt, árakat, GYIK-et, videós blokkot, Google térképet és gyors kapcsolatfelvételi gombokat.",
@@ -195,7 +195,7 @@ if (chatClose){
 document.querySelectorAll('[data-chat]').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     const q = btn.getAttribute('data-chat');
-    if (!chatbox.classList.contains('open')) chatbox.classList.add('open');
+    if (chatbox && !chatbox.classList.contains('open')) chatbox.classList.add('open');
     setStickyVisibility(true);
     ensureStart();
     addBubble(q,'user');
@@ -312,7 +312,7 @@ document.querySelectorAll('.js-prefill').forEach(btn=>{
 })();
 
 
-// Mobil hamburger menü: navigáció + gyors kapcsolat egy helyen
+// Mobil hamburger menü
 (function mobileMenu(){
   const toggle = document.getElementById('menuToggle');
   const menu = document.getElementById('mobileMenu');
