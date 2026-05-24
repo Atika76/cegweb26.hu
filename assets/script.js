@@ -310,3 +310,38 @@ document.querySelectorAll('.js-prefill').forEach(btn=>{
     }
   }
 })();
+
+
+// Mobil hamburger menü: navigáció + gyors kapcsolat egy helyen
+(function mobileMenu(){
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  if (!toggle || !menu) return;
+
+  function setOpen(open){
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    toggle.textContent = open ? '×' : '☰';
+  }
+
+  toggle.addEventListener('click', (event)=>{
+    event.stopPropagation();
+    setOpen(!menu.classList.contains('open'));
+  });
+
+  menu.addEventListener('click', (event)=>{
+    const target = event.target.closest('a');
+    if (target) setOpen(false);
+  });
+
+  document.addEventListener('click', (event)=>{
+    if (!menu.classList.contains('open')) return;
+    if (menu.contains(event.target) || toggle.contains(event.target)) return;
+    setOpen(false);
+  });
+
+  window.addEventListener('resize', ()=>{
+    if (window.innerWidth > 980) setOpen(false);
+  });
+})();
