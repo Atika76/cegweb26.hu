@@ -1,0 +1,16 @@
+Info@cegweb26.hu e-mail beállítás röviden
+
+Ezt még külön megcsináljuk lépésről lépésre a Rackhost felületén.
+
+A cél: info@cegweb26.hu vagy hello@cegweb26.hu létrehozása.
+
+Általános lépések:
+1. Rackhost belépés.
+2. Emailek menüpont.
+3. Új e-mail fiók létrehozása.
+4. Cím: info@cegweb26.hu.
+5. Jelszó megadása.
+6. Webmailben teszt küldés/fogadás.
+7. Ha működik, utána a weboldalon lecserélhető a cegweb26@gmail.com cím info@cegweb26.hu-ra.
+
+Most direkt nem cseréltem le a weboldalon a Gmail címet, mert előbb létre kell hozni az info@cegweb26.hu címet, különben az érdeklődők rossz címre írnának.
