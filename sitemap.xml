@@ -2,32 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cegweb26.hu/</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
-    <loc>https://cegweb26.hu/index.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://cegweb26.hu/epitoipari-premium.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
-    <loc>https://cegweb26.hu/kapcsolat.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://cegweb26.hu/autoszerelo-premium.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
-    <loc>https://cegweb26.hu/rolunk.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://cegweb26.hu/etterem-premium.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
-    <loc>https://cegweb26.hu/szolgaltatasok.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://cegweb26.hu/fogorvos-premium.html</loc>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://cegweb26.hu/ajanlat.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
 </urlset>
