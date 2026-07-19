@@ -1,5 +1,5 @@
 CÉGWEB26 – SEO-JAVÍTOTT VERZIÓ
-Készült: 2026-07-13
+Frissítve: 2026-07-19
 
 ELVÉGZETT JAVÍTÁSOK
 - Hibás sitemap.xml javítva; csak létező és indexelhető oldalak szerepelnek benne.
@@ -15,6 +15,13 @@ ELVÉGZETT JAVÍTÁSOK
 - A főoldali és szakmai H1 címek keresőbarátabbak lettek.
 - 404.html oldal létrehozva GitHub Pages használatához.
 - A webmanifest kezdő URL-je a canonical főoldalra lett állítva.
+- A félreérthető 4,9-es és 5,0-s mintaértékelések, csillagok és nem valódi ügyfélvélemények eltávolítva.
+- A négy szakmai szolgáltatási oldal részletes, szakmaspecifikus SEO-tartalommal bővítve.
+- A szakmai oldalakon valós szolgáltatásokat, képeket és kapcsolatfelvételt bemutató bizalomépítő blokkok készültek.
+- A szakmai oldalak csomagárakkal és további gyakori kérdésekkel bővültek.
+- A főoldali belső linkek leíróbb szöveget kaptak.
+- Az ajanlat.html oldal noindex,follow beállítást kapott, és kikerült a sitemapből.
+- A sitemap módosítási dátumai frissítve.
 
 FELTÖLTÉS UTÁN
 1. Ellenőrizd, hogy a CNAME fájl továbbra is a cegweb26.hu címet tartalmazza.
