@@ -111,26 +111,26 @@
         <a href="#referenciak">Bizalomépítés</a>
         <a href="#kapcsolat">Kapcsolat</a>
       </nav>
-      <div class="header-contact" aria-label="Gyors kapcsolat">
+      <div class="header-contact" role="group" aria-label="Gyors kapcsolat">
         <a class="header-contact-btn wa" href="https://wa.me/36704292162" target="_blank" rel="noopener" title="WhatsApp írás"><span class="hc-icon">💬</span><span class="hc-text">WhatsApp</span></a>
         <a class="header-contact-btn call" href="tel:+36704292162" title="Hívás indítása"><span class="hc-icon">📞</span><span class="hc-text">Hívás</span></a>
         <a class="header-contact-btn mail" href="mailto:cegweb26@gmail.com" title="E-mail küldése"><span class="hc-icon">✉️</span><span class="hc-text">E-mail</span></a>
       </div>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü megnyitása" aria-expanded="false">☰</button>
-      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
         <a href="/#mintak">Minták</a>
         <a href="/#arak">Árak</a>
         <a href="#referenciak">Bizalomépítés</a>
         <a href="#kapcsolat">Kapcsolat</a>
         <div class="mobile-menu-divider"></div>
         <a class="mobile-contact wa" href="https://wa.me/36704292162" target="_blank" rel="noopener">💬 WhatsApp írás</a>
-        <a class="mobile-contact call" href="tel:+36704292162">📞 Hívás indítása</a>
+        <a class="mobile-contact call" href="tel:+36704292162">📞&nbsp;Hívás&nbsp;indítása</a>
         <a class="mobile-contact mail" href="mailto:cegweb26@gmail.com">✉️ E-mail küldése</a>
       </div>
     </div>
   </header>
 
-  
+
 <section class="hero">
   <div class="container hero-grid">
     <div class="reveal">
@@ -226,7 +226,7 @@
       <h2>Fogorvosi weboldal 29 000 Ft-tól</h2>
       <p>Egyszerű rendelői bemutatkozáshoz Alap, részletes kezelési tartalomhoz Standard, egyedibb megjelenéshez Prémium csomag választható.</p>
     </div>
-    <div class="card" style="text-align:center">
+    <div class="card text-center">
       <p>A csomagár a weboldal elkészítését tartalmazza. A domain és a tárhely éves díja külön tétel, de a kiválasztásban és a beállításban segítséget kapsz.</p>
       <a class="btn" href="/#arak">Csomagok és árak megtekintése</a>
     </div>
@@ -240,11 +240,11 @@
       <p>A gyakori kérdések segítenek gyorsan tisztázni a legfontosabb tudnivalókat.</p>
     </div>
     <div class="faq">
-      <div class="faq-item"><button class="faq-q">Milyen kezeléseket érdemes kiemelni?<span>+</span></button><div class="faq-a">Azokat, amelyek a leggyakoribbak vagy a legjobban jövedelmezők: fogfehérítés, implantátum, tömés, fogkőeltávolítás.</div></div>
-      <div class="faq-item"><button class="faq-q">Kell orvosbemutató blokk?<span>+</span></button><div class="faq-a">Igen, nagyon sokat számít a bizalom miatt. Rövid bemutatkozás, végzettség és rendelői fotó ajánlott.</div></div>
-      <div class="faq-item"><button class="faq-q">Működik időpontkéréshez is?<span>+</span></button><div class="faq-a">Igen, az űrlap kifejezetten jó első kapcsolatfelvételhez. Később online időpontfoglaló rendszer is köthető hozzá.</div></div>
-      <div class="faq-item"><button class="faq-q">Mennyi idő alatt készülhet el az oldal?<span>+</span></button><div class="faq-a">Ha a rendelő adatai, a kezelések, a képek, a nyitvatartás és az elérhetőségek rendelkezésre állnak, az első használható változat akár 1–3 nap alatt elkészülhet.</div></div>
-      <div class="faq-item"><button class="faq-q">Később bővíthető az oldal?<span>+</span></button><div class="faq-a">Igen. Új kezelések, orvosbemutatók, képek, gyakori kérdések és külső időpontfoglaló rendszer később is hozzáadható.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Milyen kezeléseket érdemes kiemelni?<span>+</span></button><div class="faq-a">Azokat, amelyek a leggyakoribbak vagy a legjobban jövedelmezők: fogfehérítés, implantátum, tömés, fogkőeltávolítás.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Kell orvosbemutató blokk?<span>+</span></button><div class="faq-a">Igen, nagyon sokat számít a bizalom miatt. Rövid bemutatkozás, végzettség és rendelői fotó ajánlott.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Működik időpontkéréshez is?<span>+</span></button><div class="faq-a">Igen, az űrlap kifejezetten jó első kapcsolatfelvételhez. Később online időpontfoglaló rendszer is köthető hozzá.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Mennyi idő alatt készülhet el az oldal?<span>+</span></button><div class="faq-a">Ha a rendelő adatai, a kezelések, a képek, a nyitvatartás és az elérhetőségek rendelkezésre állnak, az első használható változat akár 2–3 nap alatt elkészülhet.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Később bővíthető az oldal?<span>+</span></button><div class="faq-a">Igen. Új kezelések, orvosbemutatók, képek, gyakori kérdések és külső időpontfoglaló rendszer később is hozzáadható.</div></div>
     </div>
   </div>
 </section>
@@ -256,27 +256,28 @@
       <p>Írd meg röviden, mire van szükséged, és személyre szabott ajánlatot kapsz.</p>
     </div>
     <div class="form-wrap">
-      <form>
+      <form action="https://formsubmit.co/cegweb26@gmail.com" method="POST" data-email-form>
         <input type="hidden" name="_subject" value="Új ajánlatkérés – Fogorvosi Prémium Sablon">
-        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://cegweb26.hu/koszonjuk.html">
+        <input type="hidden" name="_url" value="https://cegweb26.hu/fogorvos-premium.html">
         <input type="hidden" name="Oldal" value="Fogorvosi Prémium Sablon">
-        <input type="text" name="_honey" style="display:none">
+        <input class="honey-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-grid">
-          <input name="Név" placeholder="Név" required>
-          <input name="E-mail" type="email" placeholder="E-mail" required>
-          <input name="Telefonszám" placeholder="Telefonszám">
-          <select name="Kért szolgáltatás" required>
+          <div class="field"><label for="fogorvos-name">Név *</label><input id="fogorvos-name" name="Név" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="fogorvos-email">E-mail *</label><input id="fogorvos-email" name="_replyto" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="fogorvos-phone">Telefonszám</label><input id="fogorvos-phone" name="Telefonszám" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="fogorvos-service">Kért szolgáltatás *</label><select id="fogorvos-service" name="Kért szolgáltatás" required>
             <option>Fogkőeltávolítás</option><option>Fogfehérítés</option><option>Tömés</option><option>Gyökérkezelés</option><option>Implantátum</option><option>Általános érdeklődés</option>
-          </select>
+          </select></div>
         </div>
-        <textarea name="Üzenet" placeholder="Írd le röviden, melyik kezelést vagy rendelői szolgáltatást szeretnéd kiemelni, illetve milyen időpontkérő blokkra van szükség." required></textarea>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
-          <button class="btn" type="submit">Ajánlatot kérek</button>
+        <div class="field form-message-field"><label for="fogorvos-message">Üzenet *</label><textarea id="fogorvos-message" name="Üzenet" placeholder="Írd le röviden, melyik kezelést vagy rendelői szolgáltatást szeretnéd kiemelni, illetve milyen időpontkérő blokkra van szükség." required></textarea></div>
+        <label class="consent-field"><input type="checkbox" name="Adatkezelési hozzájárulás" value="Elfogadva" required><span>Elfogadom az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>. *</span></label>
+        <div class="form-actions">
+          <button class="btn" type="submit">Ajánlatkérés elküldése</button>
           <a class="btn-outline" href="mailto:cegweb26@gmail.com?subject=Fogorvosi%20Prémium%20Sablon">Inkább e-mailt írok</a>
         </div>
-        <div class="notice">Az ajánlatkérés gomb megnyitja az e-mail küldést az előre kitöltött adatokkal.</div>
+        <div class="notice">Az elküldött ajánlatkérés e-mailben érkezik meg. Sikeres küldés után visszaigazoló oldal jelenik meg.</div>
       </form>
     </div>
   </div>
@@ -285,7 +286,7 @@
   <footer class="footer">
     <div class="container footer-box">
       <div>© 2026 Cégweb26 Weboldalkészítés</div>
-      <div>Kapcsolat • ajánlatkérés</div>
+      <div class="footer-links"><a href="mailto:cegweb26@gmail.com">Kapcsolat</a><a href="adatkezeles.html">Adatkezelés</a></div>
     </div>
   </footer>
 

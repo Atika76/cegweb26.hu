@@ -215,56 +215,18 @@ if (chatText) chatText.addEventListener('keydown', e=>{
   if (e.key === 'Enter'){ e.preventDefault(); sendChat(); }
 });
 
-function buildMailtoFromForm(form){
-  const formData = new FormData(form);
-  const pageTitle = formData.get('Oldal') || document.title || 'Weboldal ajánlatkérés';
-  const name = String(formData.get('Név') || '').trim();
-  const email = String(formData.get('E-mail') || '').trim();
-  const phone = String(formData.get('Telefonszám') || '').trim();
-  const business = String(formData.get('Vállalkozás típusa') || formData.get('Kért szolgáltatás') || '').trim();
-  const message = String(formData.get('Üzenet') || '').trim();
-
-  const extras = [];
-  for (const [key, value] of formData.entries()) {
-    if (!value) continue;
-    if (String(key).startsWith('_')) continue;
-    if (['Név','E-mail','Telefonszám','Vállalkozás típusa','Kért szolgáltatás','Üzenet','Oldal'].includes(String(key))) continue;
-    extras.push(`${key}: ${value}`);
-  }
-
-  const subject = encodeURIComponent(`Weboldal ajánlatkérés - ${pageTitle}`);
-  const lines = [
-    `Oldal: ${pageTitle}`,
-    `Név: ${name || '-'}`,
-    `E-mail: ${email || '-'}`,
-    `Telefonszám: ${phone || '-'}`,
-    `${formData.get('Vállalkozás típusa') ? 'Vállalkozás típusa' : (formData.get('Kért szolgáltatás') ? 'Kért szolgáltatás' : 'Téma')}: ${business || '-'}`,
-    ''
-  ];
-  if (extras.length) {
-    lines.push('További adatok:');
-    lines.push(...extras);
-    lines.push('');
-  }
-  lines.push('Üzenet:');
-  lines.push(message || '-');
-  lines.push('');
-  lines.push('Üzenet küldve a Cégweb26 Weboldalkészítés oldalról.');
-
-  return 'mailto:cegweb26@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(lines.join('\n'));
-}
-
-document.querySelectorAll('form').forEach(form=>{
-  form.addEventListener('submit', e=>{
-    e.preventDefault();
+document.querySelectorAll('form[data-email-form]').forEach(form=>{
+  form.addEventListener('submit', ()=>{
+    const submitButton = form.querySelector('[type="submit"]');
     const notice = form.querySelector('.notice');
-    if (notice){
-      notice.innerHTML = 'Az ajánlatkérés most biztonságosan a saját levelezőprogramot nyitja meg előre kitöltött adatokkal. Ellenőrizd az üzenetet, majd küldd el.';
+    if (submitButton){
+      submitButton.disabled = true;
+      submitButton.textContent = 'Küldés folyamatban…';
     }
-    window.location.href = buildMailtoFromForm(form);
-    setTimeout(()=>{
-      window.location.href = 'koszonjuk.html';
-    }, 1200);
+    if (notice){
+      notice.textContent = 'Az ajánlatkérés küldése folyamatban van. Kérlek, ne zárd be az oldalt.';
+      notice.setAttribute('role', 'status');
+    }
   });
 });
 
@@ -321,9 +283,13 @@ document.querySelectorAll('.js-prefill').forEach(btn=>{
   function setOpen(open){
     menu.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
     menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    menu.inert = !open;
     toggle.textContent = open ? '×' : '☰';
   }
+
+  setOpen(false);
 
   toggle.addEventListener('click', (event)=>{
     event.stopPropagation();
@@ -339,6 +305,13 @@ document.querySelectorAll('.js-prefill').forEach(btn=>{
     if (!menu.classList.contains('open')) return;
     if (menu.contains(event.target) || toggle.contains(event.target)) return;
     setOpen(false);
+  });
+
+  document.addEventListener('keydown', (event)=>{
+    if (event.key === 'Escape' && menu.classList.contains('open')){
+      setOpen(false);
+      toggle.focus();
+    }
   });
 
   window.addEventListener('resize', ()=>{
