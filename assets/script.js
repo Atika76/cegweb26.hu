@@ -65,8 +65,6 @@ const chatBody = document.getElementById('chatBody');
 const chatText = document.getElementById('chatText');
 const chatSend = document.getElementById('chatSend');
 const chatClose = document.getElementById('chatClose');
-const stickyCta = document.querySelector('.sticky-cta');
-const contactSection = document.getElementById('kapcsolat');
 const quoteForm = document.getElementById('quoteForm');
 
 function addBubble(text, who='bot'){
@@ -162,41 +160,22 @@ function ensureStart(){
   addBubble(pageData.intro || chatbotData.default.intro);
 }
 
-function setStickyVisibility(hidden){
-  if (!document.body) return;
-  document.body.classList.toggle('hide-sticky', !!hidden);
-}
-
-if (contactSection && stickyCta){
-  const stickyObserver = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      setStickyVisibility(entry.isIntersecting);
-    });
-  }, { threshold: 0.18 });
-  stickyObserver.observe(contactSection);
-}
-
 if (chatLaunch){
   chatLaunch.addEventListener('click', ()=>{
     chatbox.classList.toggle('open');
     const opened = chatbox.classList.contains('open');
     if (opened) ensureStart();
-    setStickyVisibility(opened);
   });
 }
 if (chatClose){
   chatClose.addEventListener('click', ()=>{
     chatbox.classList.remove('open');
-    if (!contactSection || !contactSection.getBoundingClientRect || contactSection.getBoundingClientRect().top > window.innerHeight * 0.82) {
-      setStickyVisibility(false);
-    }
   });
 }
 document.querySelectorAll('[data-chat]').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     const q = btn.getAttribute('data-chat');
     if (chatbox && !chatbox.classList.contains('open')) chatbox.classList.add('open');
-    setStickyVisibility(true);
     ensureStart();
     addBubble(q,'user');
     setTimeout(()=>addBubble(smartReply(q)),250);
