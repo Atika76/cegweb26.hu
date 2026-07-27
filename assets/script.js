@@ -297,3 +297,45 @@ document.querySelectorAll('.js-prefill').forEach(btn=>{
     if (window.innerWidth > 980) setOpen(false);
   });
 })();
+
+// A fejléc lefelé görgetéskor helyet ad a tartalomnak,
+// felfelé görgetéskor pedig azonnal újra megjelenik.
+(function smartHeader(){
+  const header = document.querySelector('.topbar');
+  if (!header) return;
+
+  let lastScrollY = Math.max(0, window.scrollY);
+  let ticking = false;
+  const directionThreshold = 7;
+  const alwaysVisibleUntil = 24;
+
+  function updateHeader(){
+    const currentScrollY = Math.max(0, window.scrollY);
+    const difference = currentScrollY - lastScrollY;
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIsOpen = mobileMenu && mobileMenu.classList.contains('open');
+    const headerHasFocus = header.contains(document.activeElement);
+
+    if (currentScrollY <= alwaysVisibleUntil || menuIsOpen || headerHasFocus){
+      header.classList.remove('header-hidden');
+    } else if (difference > directionThreshold){
+      header.classList.add('header-hidden');
+    } else if (difference < -directionThreshold){
+      header.classList.remove('header-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', ()=>{
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateHeader);
+  }, { passive:true });
+
+  window.addEventListener('pageshow', ()=>{
+    lastScrollY = Math.max(0, window.scrollY);
+    if (lastScrollY <= alwaysVisibleUntil) header.classList.remove('header-hidden');
+  });
+})();

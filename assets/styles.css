@@ -48,6 +48,13 @@ img{max-width:100%;display:block}
   backdrop-filter: blur(14px);
   background:rgba(7,17,31,.62);
   border-bottom:1px solid var(--line);
+  transform:translateY(0);
+  transition:transform .28s ease;
+  will-change:transform;
+}
+.topbar.header-hidden{transform:translateY(calc(-100% - 2px))}
+@media (prefers-reduced-motion:reduce){
+  .topbar{transition:none}
 }
 .nav{display:flex;align-items:center;justify-content:flex-start;gap:16px;padding:16px 0}
 .brand{display:flex;gap:12px;align-items:center;font-weight:800;min-width:0}
