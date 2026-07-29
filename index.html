@@ -45,33 +45,19 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://cegweb26.hu/#organization",
-      "name": "Cégweb26 Weboldalkészítés",
-      "alternateName": "Cégweb26",
+      "@type": "Person",
+      "@id": "https://cegweb26.hu/#person",
+      "name": "Bartha Attila",
       "url": "https://cegweb26.hu/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cegweb26.hu/assets/logo-cegweb26-pro.png",
-        "width": 1400,
-        "height": 320
-      },
-      "image": "https://cegweb26.hu/assets/og-image.png",
       "email": "cegweb26@gmail.com",
       "telephone": "+36 70 429 2162",
-      "description": "Modern, mobilbarát weboldalkészítés szakiknak, kisvállalkozóknak és szolgáltatóknak.",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Magyarország"
-      },
-      "knowsLanguage": "hu",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+36 70 429 2162",
-        "email": "cegweb26@gmail.com",
-        "contactType": "sales",
-        "areaServed": "HU",
-        "availableLanguage": "Hungarian"
+      "jobTitle": "Webfejlesztő",
+      "knowsAbout": ["Weboldalkészítés", "Webalkalmazás-fejlesztés", "Digitális rendszerek"],
+      "brand": {
+        "@type": "Brand",
+        "name": "Cégweb26",
+        "url": "https://cegweb26.hu/",
+        "logo": "https://cegweb26.hu/assets/logo-cegweb26-pro.png"
       }
     },
     {
@@ -79,34 +65,22 @@
       "@id": "https://cegweb26.hu/#website",
       "url": "https://cegweb26.hu/",
       "name": "Cégweb26",
-      "publisher": {
-        "@id": "https://cegweb26.hu/#organization"
-      },
+      "publisher": {"@id": "https://cegweb26.hu/#person"},
       "inLanguage": "hu-HU"
     },
     {
       "@type": "Service",
       "@id": "https://cegweb26.hu/#weboldalkeszites",
-      "name": "Weboldalkészítés szakiknak és vállalkozóknak",
-      "serviceType": "Weboldalkészítés és honlapkészítés",
-      "description": "Modern, mobilbarát bemutatkozó és céges weboldalak készítése szakiknak, kisvállalkozóknak és szolgáltatóknak.",
-      "provider": {
-        "@id": "https://cegweb26.hu/#organization"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Magyarország"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "29000",
-        "priceCurrency": "HUF",
-        "description": "Weboldalkészítés induló ára az Alap csomagban."
-      }
+      "name": "Weboldaltervezés és webfejlesztés",
+      "serviceType": "Weboldaltervezés és webalkalmazás-fejlesztés",
+      "description": "Modern, mobilbarát weboldalak és saját fejlesztésű digitális megoldások tervezése szakiknak, kisvállalkozásoknak és szolgáltatóknak.",
+      "provider": {"@id": "https://cegweb26.hu/#person"},
+      "areaServed": {"@type": "Country", "name": "Magyarország"}
     }
   ]
 }
-  </script>
+</script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body data-page="default">
   <header class="topbar">
@@ -120,7 +94,7 @@
         <a href="webalkalmazasok.html">Webalkalmazások</a>
         <a href="#arak">Árak</a>
         <a href="#folyamat">Hogyan működik</a>
-        <a href="#kapcsolat">Megrendelés</a>
+        <a href="#kapcsolat">Kapcsolat</a>
       </nav>
       <div class="header-contact" role="group" aria-label="Gyors kapcsolat">
         <a class="header-contact-btn wa" href="https://wa.me/36704292162" target="_blank" rel="noopener" title="WhatsApp írás"><span class="hc-icon">💬</span><span class="hc-text">WhatsApp</span></a>
@@ -133,7 +107,7 @@
         <a href="webalkalmazasok.html">Webalkalmazások</a>
         <a href="#arak">Árak</a>
         <a href="#folyamat">Hogyan működik</a>
-        <a href="#kapcsolat">Megrendelés</a>
+        <a href="#kapcsolat">Kapcsolat</a>
         <div class="mobile-menu-divider"></div>
         <a class="mobile-contact wa" href="https://wa.me/36704292162" target="_blank" rel="noopener">💬 WhatsApp írás</a>
         <a class="mobile-contact call" href="tel:+36704292162">📞&nbsp;Hívás&nbsp;indítása</a>
@@ -145,22 +119,20 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="reveal">
-        <span class="eyebrow">Kész weboldalak szakiknak és vállalkozóknak</span>
-        <h1>Modern weboldalkészítés<br>szakiknak és vállalkozóknak</h1>
+        <span class="eyebrow">Weboldalminták és egyedi digitális megoldások</span>
+        <h1>Modern weboldalak<br>szakiknak és szolgáltatóknak</h1>
         <p class="lead">
-          Kész mintákból induló, mobilbarát weboldalak építőipari vállalkozóknak, autószervizeknek,
-          éttermeknek, rendelőknek és más szolgáltatóknak. Gyors indulás, letisztult megjelenés,
-          egyszerű kapcsolatfelvétel.
+          Mobilbarát weboldalakat és egyedi digitális megoldásokat tervezek szakembereknek, szolgáltatóknak és induló projekteknek. A cél az átlátható megjelenés, a könnyű kapcsolatfelvétel és a valóban használható működés.
         </p>
-        <div class="brand-highlight">🚀 Cégweb26 – Modern weboldalak vállalkozóknak</div>
+        <div class="brand-highlight">🚀 Cégweb26 – Weboldalak és saját fejlesztésű rendszerek</div>
 <div class="hero-actions">
           <a class="btn" href="#mintak">Minták megtekintése</a>
-          <a class="btn-outline" href="#kapcsolat">Kérek weboldalt</a>
+          <a class="btn-outline" href="#kapcsolat">Ingyenes egyeztetést kérek</a>
         </div>
-        <div class="price-pill">Weboldal már 29 000 Ft-tól</div><div class="hero-note">Gyors indulás, mobilbarát megjelenés, jól látható kapcsolatfelvétel és vállalkozásodra szabott szövegezés.</div>
+        <div class="price-pill">Tájékoztató csomagárak 29 000 Ft-tól</div><div class="hero-note">Gyors indulás, mobilbarát megjelenés, jól látható kapcsolatfelvétel és vállalkozásodra szabott szövegezés.</div>
         <div class="stats">
           <div class="stat"><b>4</b><span>kész prémium minta</span></div>
-          <div class="stat"><b>2–3 nap</b><span>első használható verzió</span></div>
+          <div class="stat"><b>Gyors</b><span>első látványterv</span></div>
           <div class="stat"><b>100%</b><span>mobilbarát megjelenés</span></div>
         </div>
       </div>
@@ -200,7 +172,7 @@
             <div class="feature-icon">⌂</div>
             <div>
               <b>Kapcsolatfelvételre építve</b>
-              <span class="muted">Jól látható gombokkal és egyszerű ajánlatkéréssel.</span>
+              <span class="muted">Jól látható gombokkal és egyszerű kapcsolatfelvételsel.</span>
             </div>
           </div>
         </div>
@@ -211,7 +183,7 @@
   <section id="mintak" class="section reveal">
     <div class="container">
       <div class="section-head">
-        <h2>Weboldalkészítés különböző vállalkozásoknak</h2>
+        <h2>Weboldalminták különböző szakmákhoz</h2>
         <p>Válassz a szakmádhoz illő kiindulási mintát. A végleges weboldal saját névvel, szöveggel, képekkel, színekkel és elérhetőségekkel készül el.</p>
       </div>
 
@@ -219,44 +191,44 @@
         <article class="card">
           <div class="template-thumb"><img src="assets/preview-epito.svg" alt="Építőipari weboldal minta szakiknak" width="1600" height="900" loading="lazy" decoding="async"></div>
           <span class="template-badge">Erőteljes • Bizalomépítő</span>
-          <h3>Építőipari prémium sablon</h3>
+          <h3>Építőipari prémium weboldalminta</h3>
           <p>Kőműveseknek, burkolóknak, felújítóknak, generálkivitelezőknek és szakipari vállalkozásoknak.</p>
           <div class="card-actions">
             <a class="btn-outline" href="epitoipari-premium.html">Építőipari weboldal</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Építőipari prémium sablon" data-package="Standard">Ezt a stílust választom</a>
+            <a class="btn js-prefill" href="#kapcsolat" data-template="Építőipari prémium weboldalminta" data-package="Standard">Erről a mintáról érdeklődöm</a>
           </div>
         </article>
 
         <article class="card">
           <div class="template-thumb"><img src="assets/preview-auto.svg" alt="Autószerelő weboldal minta" width="1600" height="900" loading="lazy" decoding="async"></div>
           <span class="template-badge">Sportos • Dinamikus</span>
-          <h3>Autószerelő prémium sablon</h3>
+          <h3>Autószerelő prémium weboldalminta</h3>
           <p>Autószervizeknek, tuning műhelyeknek, gumiszervizeknek és prémium autós vállalkozásoknak.</p>
           <div class="card-actions">
             <a class="btn-outline" href="autoszerelo-premium.html">Autószerelő weboldal</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Autószerelő prémium sablon" data-package="Standard">Ezt a stílust választom</a>
+            <a class="btn js-prefill" href="#kapcsolat" data-template="Autószerelő prémium weboldalminta" data-package="Standard">Erről a mintáról érdeklődöm</a>
           </div>
         </article>
 
         <article class="card">
           <div class="template-thumb"><img src="assets/preview-etterem.svg" alt="Éttermi weboldal minta" width="1600" height="900" loading="lazy" decoding="async"></div>
           <span class="template-badge">Elegáns • Modern</span>
-          <h3>Étterem prémium sablon</h3>
+          <h3>Étterem prémium weboldalminta</h3>
           <p>Éttermeknek, bisztróknak, kávézóknak, street food helyeknek és vendéglátó vállalkozásoknak.</p>
           <div class="card-actions">
             <a class="btn-outline" href="etterem-premium.html">Éttermi weboldal</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Étterem prémium sablon" data-package="Alap">Ezt a stílust választom</a>
+            <a class="btn js-prefill" href="#kapcsolat" data-template="Étterem prémium weboldalminta" data-package="Alap">Erről a mintáról érdeklődöm</a>
           </div>
         </article>
 
         <article class="card">
           <div class="template-thumb"><img src="assets/preview-fogorvos.svg" alt="Fogorvosi weboldal minta" width="1600" height="900" loading="lazy" decoding="async"></div>
           <span class="template-badge">Tiszta • Prémium</span>
-          <h3>Fogorvosi prémium sablon</h3>
+          <h3>Fogorvosi prémium weboldalminta</h3>
           <p>Fogorvosi rendelőknek, klinikáknak és egészségügyi szolgáltatóknak.</p>
           <div class="card-actions">
             <a class="btn-outline" href="fogorvos-premium.html">Fogorvosi weboldal</a>
-            <a class="btn js-prefill" href="#kapcsolat" data-template="Fogorvosi prémium sablon" data-package="Prémium">Ezt a stílust választom</a>
+            <a class="btn js-prefill" href="#kapcsolat" data-template="Fogorvosi prémium weboldalminta" data-package="Prémium">Erről a mintáról érdeklődöm</a>
           </div>
         </article>
       </div>
@@ -307,48 +279,51 @@
     <div class="container">
       <div class="section-head">
         <h2>Árak</h2>
-        <p>Egyszerű csomagok, átlátható árakkal.</p>
+        <p>Átgondolt kiindulási csomagok, tájékoztató árakkal.</p>
       </div>
 
       <div class="grid-3">
         <article class="price">
           <h3>Alap</h3>
           <div class="amount">29 000 Ft</div>
-          <small>1 oldalas induló bemutatkozó oldal</small>
+          <small>egyszerű, egyoldalas bemutatkozás</small>
           <ul>
-            <li>kész sablon testreszabása</li>
-            <li>név, szöveg, elérhetőség csere</li>
-            <li>mobilbarát kialakítás</li>
+            <li>legfeljebb 5 tartalmi szakasz</li>
+            <li>saját név, szöveg, képek és elérhetőségek</li>
+            <li>mobilbarát kialakítás és kapcsolatgombok</li>
+            <li>1 módosítási kör</li>
           </ul>
-          <a class="btn js-prefill" href="#kapcsolat" data-package="Alap">Megrendelem</a>
+          <a class="btn js-prefill" href="#kapcsolat" data-package="Alap">Erről érdeklődöm</a>
         </article>
 
         <article class="price popular">
           <h3>Standard</h3>
           <div class="amount">49 000 Ft</div>
-          <small>a legnépszerűbb választás</small>
+          <small>részletesebb szolgáltatói weboldal</small>
           <ul>
-            <li>erősebb tartalmi felépítés</li>
-            <li>kapcsolatfelvételi logika</li>
-            <li>jobb üzleti megjelenés</li>
+            <li>legfeljebb 3 oldal vagy részletes egyoldalas felépítés</li>
+            <li>galéria, kapcsolatfelvételi űrlap és térkép</li>
+            <li>alap keresőoptimalizálási beállítások</li>
+            <li>2 módosítási kör</li>
           </ul>
-          <a class="btn js-prefill" href="#kapcsolat" data-package="Standard">Megrendelem</a>
+          <a class="btn js-prefill" href="#kapcsolat" data-package="Standard">Erről érdeklődöm</a>
         </article>
 
         <article class="price">
           <h3>Prémium</h3>
           <div class="amount">69 000 Ft</div>
-          <small>komolyabb, egyedibb megjelenés</small>
+          <small>egyedibb, többoldalas megjelenés</small>
           <ul>
-            <li>extra tartalmi blokkok</li>
-            <li>kiemelt gombok és hangsúlyok</li>
-            <li>prémium összhatás</li>
+            <li>legfeljebb 5 oldal és személyre szabott szerkezet</li>
+            <li>galéria, GYIK, kiemelt ajánlat és erős kapcsolatfelvétel</li>
+            <li>megosztási kép, sitemap és technikai SEO-alapok</li>
+            <li>3 módosítási kör</li>
           </ul>
-          <a class="btn js-prefill" href="#kapcsolat" data-package="Prémium">Megrendelem</a>
+          <a class="btn js-prefill" href="#kapcsolat" data-package="Prémium">Erről érdeklődöm</a>
         </article>
       </div>
 
-      <p class="packages-note">A domain és tárhely éves díja külön tétel lehet, de ne aggódj: a teljes beállításban és ügyintézésben segítek, hogy neked ne kelljen technikai részletekkel foglalkoznod.</p>
+      <p class="packages-note">A feltüntetett összegek tájékoztató kiindulási árak, nem minősülnek kötelező ajánlatnak. A domain, a tárhely, az esetleges fizetős külső szolgáltatások és a későbbi karbantartás külön tétel lehet.</p>
     </div>
   </section>
 
@@ -362,20 +337,20 @@
       <div class="grid-3">
         <article class="process-card">
           <span class="kicker">1. lépés</span>
-          <h3>Minta és csomag kiválasztása</h3>
-          <p>Kiválasztod a megfelelő stílust, majd megadod, melyik csomagot szeretnéd.</p>
+          <h3>Előzetes egyeztetés</h3>
+          <p>Átbeszéljük a célt, a szükséges oldalakat, funkciókat és a megfelelő kiindulási csomagot.</p>
         </article>
 
         <article class="process-card">
           <span class="kicker">2. lépés</span>
-          <h3>Adatok elküldése</h3>
-          <p>Név, telefonszám, e-mail, rövid leírás, szolgáltatások és képek.</p>
+          <h3>Tartalom és látványterv</h3>
+          <p>Összegyűjtjük a szövegeket, képeket és elérhetőségeket, majd elkészítem az első használható tervet.</p>
         </article>
 
         <article class="process-card">
           <span class="kicker">3. lépés</span>
-          <h3>Átadás és élesítés</h3>
-          <p>Kézhez kapod a kész, mobilbarát weboldalad, és segítek az élesítésben is.</p>
+          <h3>Írásbeli feltételek és megvalósítás</h3>
+          <p>A pontos tartalom, díj és határidő írásbeli rögzítése után indulhat a fizetős megvalósítás, a szükséges hivatalos feltételek mellett.</p>
         </article>
       </div>
     </div>
@@ -427,13 +402,13 @@
     </div>
   </section>
 
-  <section class="section reveal"><div class="container"><div class="section-head"><h2>Miért engem válassz?</h2><p>Nem névtelen ügynökségi oldalt kapsz, hanem olyan megoldást, amit vállalkozói szemmel, érthetően és gyakorlatiasan készítek el.</p></div><div class="why-choose-grid"><article class="why-card about-card"><div class="feature-icon">👷</div><h3>Szakiknak érthető nyelven</h3><p>Építőipari háttérrel pontosan tudom, hogy egy szakembernek nem bonyolult technikai magyarázat kell, hanem egy átlátható oldal, ami bizalmat épít és megkönnyíti az ajánlatkérést.</p></article><article class="why-card"><div class="feature-icon">⚡</div><h3>Gyors indulás</h3><p>Kész mintából indulunk, ezért nem kell heteket várni az első használható verzióra.</p></article><article class="why-card"><div class="feature-icon">★</div><h3>Komoly megjelenés</h3><p>Letisztult, prémium hatású dizájn, erős címsorokkal, gombokkal és bizalomépítő blokkokkal.</p></article><article class="why-card"><div class="feature-icon">☎</div><h3>Egyszerű kapcsolat</h3><p>WhatsApp, telefon és e-mail minden fontos ponton, hogy az érdeklődő könnyen írjon vagy hívjon.</p></article></div></div></section>
+  <section class="section reveal"><div class="container"><div class="section-head"><h2>Ki áll a Cégweb26 mögött?</h2><p>Bartha Attila vagyok, az itt bemutatott weboldalak és digitális rendszerek készítője. Építőipari tapasztalattal olyan megoldásokat tervezek, amelyek érthetők, átláthatók és a mindennapi használatban is értéket adnak.</p></div><div class="why-choose-grid"><article class="why-card about-card"><div class="feature-icon">👷</div><h3>Szakiknak érthető nyelven</h3><p>Építőipari háttérrel pontosan tudom, hogy egy szakembernek nem bonyolult technikai magyarázat kell, hanem egy átlátható oldal, ami bizalmat épít és megkönnyíti a kapcsolatfelvételt.</p></article><article class="why-card"><div class="feature-icon">⚡</div><h3>Gyors indulás</h3><p>Kész mintából indulok, ezért nem kell heteket várni az első használható verzióra.</p></article><article class="why-card"><div class="feature-icon">★</div><h3>Komoly megjelenés</h3><p>Letisztult, prémium hatású dizájn, erős címsorokkal, gombokkal és bizalomépítő blokkokkal.</p></article><article class="why-card"><div class="feature-icon">☎</div><h3>Egyszerű kapcsolat</h3><p>WhatsApp, telefon és e-mail minden fontos ponton, hogy az érdeklődő könnyen írjon vagy hívjon.</p></article></div></div></section>
 
   <section id="referenciak" class="section reveal">
     <div class="container">
       <div class="section-head">
-        <h2>Miért érdemes ezt választani?</h2>
-        <p>Gyors indulás, modern megjelenés és egyszerű megrendelési folyamat.</p>
+        <h2>Mitől átlátható a közös munka?</h2>
+        <p>Gyors indulás, modern megjelenés és egyszerű egyeztetési folyamat.</p>
       </div>
 
       <div class="grid-3">
@@ -456,8 +431,8 @@
         <article class="card">
           <span class="kicker">Átlátható ajánlat</span>
           <h3>Egyértelmű csomagok, egyértelmű döntés</h3>
-          <p>A minta, az ár és a megrendelés egy helyen látható, így könnyebb kiválasztani a megfelelő megoldást.</p>
-          <div class="muted">Minta + csomag + megrendelés</div>
+          <p>A minta, a tájékoztató ár és a kapcsolatfelvétel egy helyen látható, így könnyebb kiválasztani a megfelelő megoldást.</p>
+          <div class="muted">Minta + csomag + egyeztetés</div>
         </article>
       </div>
     </div>
@@ -468,13 +443,13 @@
 <section class="section reveal" id="velemenyek">
 <div class="container">
 <div class="section-head">
-<h2>Referencia program</h2>
-<p>A Cégweb26 jelenleg első referencia partnereit keresi.</p>
+<h2>Bemutató együttműködés</h2>
+<p>A Cégweb26 jelenleg saját referencia- és bemutatóprojektjeit építi.</p>
 </div>
 <div class="card trust-card">
-<h3>Első referencia partnereket keresek</h3>
-<p>Az első ügyfelek kedvezményes, bevezető áron rendelhetnek weboldalt cserébe egy rövid értékelésért és referenciaengedélyért.</p>
-<p>Így Ön kedvező áron kap modern weboldalt, én pedig valódi referenciákat építhetek.</p>
+<h3>Új bemutató együttműködések</h3>
+<p>Néhány új bemutató együttműködésre is nyitott vagyok, amelyek részleteit minden esetben előzetesen, írásban tisztázzuk.</p>
+<p>A cél valódi, használható megoldások és hiteles referenciák létrehozása, átlátható feltételekkel.</p>
 </div>
 </div>
 </section>
@@ -493,13 +468,17 @@
   <section id="kapcsolat" class="section reveal">
     <div class="container">
       <div class="section-head">
-        <h2>Megrendelés / ajánlatkérés</h2>
-        <p>Írd meg, melyik mintát választottad, milyen csomagot szeretnél, és milyen weboldalra van szükséged.</p>
+        <h2>Kapcsolatfelvétel és előzetes egyeztetés</h2>
+        <p>Írd meg, melyik minta érdekel, milyen célra készülne az oldal, és milyen funkciókra lenne szükséged.</p>
       </div>
+
+      <div class="business-status" role="note">
+  <strong>Fontos tájékoztatás:</strong> az üzenet elküldése kizárólag előzetes kapcsolatfelvétel, nem minősül megrendelésnek, szerződéskötésnek vagy fizetési kötelezettségvállalásnak. A feltüntetett árak tájékoztató jellegűek. Fizetős szolgáltatás teljesítése kizárólag a szükséges hivatalos és számlázási feltételek biztosítása, valamint írásbeli megállapodás után történhet.
+</div>
 
       <div class="form-wrap">
         <form id="quoteForm" action="https://formsubmit.co/cegweb26@gmail.com" method="POST" data-email-form>
-          <input type="hidden" name="_subject" value="Új Cégweb26 ajánlatkérés">
+          <input type="hidden" name="_subject" value="Új Cégweb26 érdeklődés">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://cegweb26.hu/koszonjuk.html">
           <input type="hidden" name="_url" value="https://cegweb26.hu/">
@@ -511,7 +490,7 @@
             <div class="field"><label for="quote-email">E-mail *</label><input id="quote-email" name="_replyto" type="email" autocomplete="email" required></div>
             <div class="field"><label for="quote-phone">Telefonszám</label><input id="quote-phone" name="Telefonszám" type="tel" autocomplete="tel"></div>
 
-            <div class="field"><label for="business-type">Vállalkozás típusa</label><select id="business-type" name="Vállalkozás típusa">
+            <div class="field"><label for="business-type">Tevékenységi terület</label><select id="business-type" name="Tevékenységi terület">
               <option>Építőipar</option>
               <option>Autószerviz</option>
               <option>Étterem</option>
@@ -520,18 +499,18 @@
               <option>Egyéb</option>
             </select></div>
 
-            <div class="field"><label for="templateSelect">Kiválasztott sablon</label><select name="Kiválasztott sablon" id="templateSelect">
-              <option value="">Kiválasztott sablon</option>
-              <option>Építőipari prémium sablon</option>
-              <option>Autószerelő prémium sablon</option>
-              <option>Étterem prémium sablon</option>
-              <option>Fogorvosi prémium sablon</option>
+            <div class="field"><label for="templateSelect">Kiválasztott weboldalminta</label><select name="Kiválasztott weboldalminta" id="templateSelect">
+              <option value="">Kiválasztott weboldalminta</option>
+              <option>Építőipari prémium weboldalminta</option>
+              <option>Autószerelő prémium weboldalminta</option>
+              <option>Étterem prémium weboldalminta</option>
+              <option>Fogorvosi prémium weboldalminta</option>
               <option>Egyedi webalkalmazás / online platform</option>
               <option>Még nem tudom</option>
             </select></div>
 
-            <div class="field"><label for="packageSelect">Kért csomag</label><select name="Kért csomag" id="packageSelect">
-              <option value="">Kért csomag</option>
+            <div class="field"><label for="packageSelect">Érdekelt csomag</label><select name="Érdekelt csomag" id="packageSelect">
+              <option value="">Érdekelt csomag</option>
               <option>Alap – 29 000 Ft</option>
               <option>Standard – 49 000 Ft</option>
               <option>Prémium – 69 000 Ft</option>
@@ -541,14 +520,14 @@
           </div>
 
           <div class="field form-message-field"><label for="quote-message">Üzenet *</label><textarea id="quote-message" name="Üzenet" placeholder="Példa: építőipari mintát szeretnék Standard csomagban, saját névvel, elérhetőségekkel és pár képpel." required></textarea></div>
-          <label class="consent-field"><input type="checkbox" name="Adatkezelési hozzájárulás" value="Elfogadva" required><span>Elolvastam és elfogadom az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>, és hozzájárulok, hogy az ajánlatkérésem megválaszolásához kezeljék a megadott adataimat. *</span></label>
+          <label class="consent-field"><input type="checkbox" name="Adatkezelési hozzájárulás" value="Elfogadva" required><span>Elolvastam és elfogadom az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>, és hozzájárulok, hogy a megkeresésem megválaszolásához kezeljék a megadott adataimat. *</span></label>
 
           <div class="form-actions">
-            <button class="btn" type="submit">Ajánlatkérés elküldése</button>
+            <button class="btn" type="submit">Érdeklődés elküldése</button>
             <a class="btn-outline" href="mailto:cegweb26@gmail.com?subject=C%C3%A9gweb26%20ajanlatkeres">Inkább e-mailt írok</a>
           </div>
 
-          <div class="notice">Az elküldött ajánlatkérés e-mailben érkezik meg hozzám. Sikeres küldés után visszaigazoló oldal jelenik meg.</div>
+          <div class="notice">Az üzenet e-mailben érkezik meg hozzám. Sikeres küldés után visszaigazoló oldal jelenik meg.</div>
         </form>
       </div>
     </div>
@@ -556,8 +535,8 @@
 
   <footer class="footer">
     <div class="container footer-box">
-      <div>© 2026 Cégweb26 Weboldalkészítés</div>
-      <div class="footer-links"><span>WhatsApp: +36 70 429 2162</span><a href="mailto:cegweb26@gmail.com">cegweb26@gmail.com</a><a href="adatkezeles.html">Adatkezelés</a></div>
+      <div><strong>Cégweb26</strong><br><span class="footer-sub">Bartha Attila webfejlesztési márkája és szakmai portfóliója</span></div>
+      <div class="footer-links"><span>WhatsApp: +36 70 429 2162</span><a href="mailto:cegweb26@gmail.com">cegweb26@gmail.com</a><a href="adatkezeles.html">Adatkezelés</a><a href="mukodesi-tajekoztato.html">Működési tájékoztató</a></div>
     </div>
   </footer>
 

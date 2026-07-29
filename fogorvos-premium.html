@@ -70,7 +70,7 @@
       "name": "Fogorvosi weboldal készítés",
       "description": "Weboldalkészítés fogorvosoknak, fogászati rendelőknek és egészségügyi szolgáltatóknak.",
       "provider": {
-        "@id": "https://cegweb26.hu/#organization"
+        "@id": "https://cegweb26.hu/#person"
       },
       "areaServed": {
         "@type": "Country",
@@ -97,6 +97,7 @@
   ]
 }
   </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="theme-green" data-page="fogorvos">
   <header class="topbar">
@@ -140,7 +141,7 @@
       <h1>Fogorvosi weboldal készítés rendelőknek és fogászatoknak</h1>
       <p class="lead">A fogászati oldalon a tiszta design, a kezelések áttekinthetősége, a bizalom és az időpontkérés a legfontosabb.</p>
       <div class="hero-actions">
-        <a class="btn" href="#kapcsolat">Ajánlatot kérek</a>
+        <a class="btn" href="#kapcsolat">Egyeztetést kérek</a>
         <a class="btn-outline" href="#video">Videó bemutató</a>
       </div>
       <div class="stats">
@@ -196,7 +197,7 @@
       <div class="feature-list">
         <div class="feature-item"><div class="feature-icon">⌂</div><div><b>Domain ügyintézés</b><span class="muted">Segítünk a gyors és kényelmes elindulásban.</span></div></div>
         <div class="feature-item"><div class="feature-icon">☁</div><div><b>Tárhely + SSL</b><span class="muted">Biztonságos induláshoz.</span></div></div>
-        <div class="feature-item"><div class="feature-icon">✉</div><div><b>E-mail értesítés</b><span class="muted">Ajánlatkérés a statikus oldalról is.</span></div></div>
+        <div class="feature-item"><div class="feature-icon">✉</div><div><b>E-mail értesítés</b><span class="muted">Üzenetküldés a statikus oldalról is.</span></div></div>
       </div>
     </div>
     <div class="video-card" id="video">
@@ -225,11 +226,11 @@
 <section class="section reveal">
   <div class="container">
     <div class="section-head">
-      <h2>Fogorvosi weboldal 29 000 Ft-tól</h2>
+      <h2>Tájékoztató fogorvosi weboldalcsomagok 29 000 Ft-tól</h2>
       <p>Egyszerű rendelői bemutatkozáshoz Alap, részletes kezelési tartalomhoz Standard, egyedibb megjelenéshez Prémium csomag választható.</p>
     </div>
     <div class="card text-center">
-      <p>A csomagár a weboldal elkészítését tartalmazza. A domain és a tárhely éves díja külön tétel, de a kiválasztásban és a beállításban segítséget kapsz.</p>
+      <p>A feltüntetett összeg a bemutatott tartalomhoz tartozó tájékoztató kiindulási díj. A domain és a tárhely éves díja külön tétel, de a kiválasztásban és a beállításban segítséget kapsz.</p>
       <a class="btn" href="/#arak">Csomagok és árak megtekintése</a>
     </div>
   </div>
@@ -254,16 +255,19 @@
 <section id="kapcsolat" class="section reveal">
   <div class="container">
     <div class="section-head">
-      <h2>Ajánlatkérés</h2>
-      <p>Írd meg röviden, mire van szükséged, és személyre szabott ajánlatot kapsz.</p>
+      <h2>Kapcsolatfelvétel</h2>
+      <p>Írd meg röviden, milyen oldalra lenne szükséged, és egyeztetjük a lehetőségeket.</p>
     </div>
+    <div class="business-status" role="note">
+  <strong>Fontos tájékoztatás:</strong> az üzenet elküldése kizárólag előzetes kapcsolatfelvétel, nem minősül megrendelésnek, szerződéskötésnek vagy fizetési kötelezettségvállalásnak. A feltüntetett árak tájékoztató jellegűek. Fizetős szolgáltatás teljesítése kizárólag a szükséges hivatalos és számlázási feltételek biztosítása, valamint írásbeli megállapodás után történhet.
+</div>
     <div class="form-wrap">
       <form action="https://formsubmit.co/cegweb26@gmail.com" method="POST" data-email-form>
-        <input type="hidden" name="_subject" value="Új ajánlatkérés – Fogorvosi Prémium Sablon">
+        <input type="hidden" name="_subject" value="Új érdeklődés – Fogorvosi Prémium Weboldalminta">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://cegweb26.hu/koszonjuk.html">
         <input type="hidden" name="_url" value="https://cegweb26.hu/fogorvos-premium.html">
-        <input type="hidden" name="Oldal" value="Fogorvosi Prémium Sablon">
+        <input type="hidden" name="Oldal" value="Fogorvosi Prémium Weboldalminta">
         <input class="honey-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-grid">
           <div class="field"><label for="fogorvos-name">Név *</label><input id="fogorvos-name" name="Név" type="text" autocomplete="name" required></div>
@@ -276,10 +280,10 @@
         <div class="field form-message-field"><label for="fogorvos-message">Üzenet *</label><textarea id="fogorvos-message" name="Üzenet" placeholder="Írd le röviden, melyik kezelést vagy rendelői szolgáltatást szeretnéd kiemelni, illetve milyen időpontkérő blokkra van szükség." required></textarea></div>
         <label class="consent-field"><input type="checkbox" name="Adatkezelési hozzájárulás" value="Elfogadva" required><span>Elfogadom az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>. *</span></label>
         <div class="form-actions">
-          <button class="btn" type="submit">Ajánlatkérés elküldése</button>
-          <a class="btn-outline" href="mailto:cegweb26@gmail.com?subject=Fogorvosi%20Prémium%20Sablon">Inkább e-mailt írok</a>
+          <button class="btn" type="submit">Érdeklődés elküldése</button>
+          <a class="btn-outline" href="mailto:cegweb26@gmail.com?subject=Fogorvosi%20Prémium%20Weboldalminta">Inkább e-mailt írok</a>
         </div>
-        <div class="notice">Az elküldött ajánlatkérés e-mailben érkezik meg. Sikeres küldés után visszaigazoló oldal jelenik meg.</div>
+        <div class="notice">Az üzenet e-mailben érkezik meg. Sikeres küldés után visszaigazoló oldal jelenik meg.</div>
       </form>
     </div>
   </div>
@@ -287,8 +291,8 @@
 
   <footer class="footer">
     <div class="container footer-box">
-      <div>© 2026 Cégweb26 Weboldalkészítés</div>
-      <div class="footer-links"><a href="mailto:cegweb26@gmail.com">Kapcsolat</a><a href="adatkezeles.html">Adatkezelés</a></div>
+      <div><strong>Cégweb26</strong><br><span class="footer-sub">Bartha Attila webfejlesztési márkája és szakmai portfóliója</span></div>
+      <div class="footer-links"><a href="mailto:cegweb26@gmail.com">Kapcsolat</a><a href="adatkezeles.html">Adatkezelés</a><a href="mukodesi-tajekoztato.html">Működési tájékoztató</a></div>
     </div>
   </footer>
 
