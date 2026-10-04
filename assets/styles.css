@@ -518,3 +518,55 @@ button:disabled{cursor:wait;opacity:.72}
   .legal-content td{border:0;border-bottom:1px solid var(--line);padding:12px}
   .legal-content td:last-child{border-bottom:0}
 }
+
+/* 2026-10-04: erosebb, azonnal ertheto nyitoajanlat */
+.hero-benefits{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:20px 0 14px;
+}
+.hero-benefits span{
+  display:inline-flex;
+  align-items:center;
+  min-height:38px;
+  padding:9px 13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.09);
+  color:#eaf1fb;
+  font-weight:700;
+  font-size:14px;
+}
+.hero .price-pill{
+  margin:0 0 10px;
+  font-size:15px;
+}
+.hero .hero-note{
+  max-width:720px;
+  margin:0 0 18px;
+  font-size:13px;
+  line-height:1.55;
+}
+.hero .hero-actions{
+  margin:18px 0 18px;
+}
+.hero .brand-highlight{
+  margin:0 0 22px;
+}
+@media (max-width:720px){
+  .hero-benefits{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+  .hero-benefits span{
+    width:100%;
+  }
+  .hero .price-pill{
+    display:flex;
+    width:100%;
+    border-radius:18px;
+    line-height:1.45;
+  }
+}
